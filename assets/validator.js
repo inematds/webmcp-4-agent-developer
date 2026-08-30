@@ -20,7 +20,7 @@
       registration: { usesAbortSignal: true },
       risk: { level: 'low', effect: 'read', humanConfirmation: false },
       fallback: 'O mesmo filtro permanece disponível no formulário da página.',
-      resultExample: { ok: true, total: 1, cursos: [{ id: 'wmcp-builder', titulo: 'WebMCP Builder' }] }
+      resultExample: { ok: true, total: 1, itens: [{ id: 'catalogo-integrado', status: 'disponivel' }] }
     },
     {
       name: 'consultar_disponibilidade',
@@ -207,7 +207,7 @@
     const url = URL.createObjectURL(blob);
     const anchor = document.createElement('a');
     anchor.href = url;
-    anchor.download = `webmcp-builder-diagnostico-${new Date().toISOString().slice(0, 10)}.json`;
+    anchor.download = `webmcp-agent-diagnostico-${new Date().toISOString().slice(0, 10)}.json`;
     anchor.click();
     URL.revokeObjectURL(url);
   }

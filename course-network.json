@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "courseId": "webmcp-zero-expert",
-  "repository": "webmcp-2-builder",
-  "phase": "builder",
-  "order": 1,
-  "previous": "webmcp-1-formacao",
-  "next": "webmcp-3-integrator",
+  "repository": "webmcp-4-agent-developer",
+  "phase": "agent-developer",
+  "order": 3,
+  "previous": "webmcp-3-integrator",
+  "next": "webmcp-5-expert",
   "destination": "webmcp-6-agent-hub",
   "progress": {
     "namespace": "inema.webmcp-zero-expert.*",

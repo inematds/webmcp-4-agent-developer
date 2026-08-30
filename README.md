@@ -1,28 +1,28 @@
-# WebMCP Builder — Formação 2
+# WebMCP Agent Developer — Formação 4
 
-Formação prática dedicada ao papel **WebMCP Builder**. O projeto ensina a sair do diagnóstico de prontidão e publicar ferramentas WebMCP declarativas e imperativas sem remover a experiência humana do site.
+Formação prática dedicada ao papel **WebMCP Agent Developer**. O projeto ensina a construir o agente de navegador que descobre, seleciona e executa ferramentas oferecidas pela página sem entregar autorização ao modelo.
 
 ## O que está incluído
 
-- arquitetura de 4 capítulos Builder, cada um com seus próprios módulos;
+- arquitetura de 4 capítulos Agent Developer, cada um com seus próprios módulos;
 - Capítulo 1 publicado com 4 módulos completos, 24 tópicos e cerca de 12 horas;
 - progresso, dúvidas, anotações, temas e exportação/importação da jornada;
-- mini-site INEMA Cursos para comparar pessoa, automação visual e WebMCP;
+- console local para auditar o contexto apresentado ao agente;
 - validador avançado de catálogos, tools e JSON Schemas;
 - geração estática pronta para GitHub Pages e Vercel.
 
 ## Capítulos e módulos
 
-O menu superior navega pelos capítulos da formação Builder. A numeração segue `capítulo.módulo`: `1.1`, `1.2`, `2.1` e assim por diante.
+O menu superior navega pelos capítulos da formação Agent Developer. A numeração segue `capítulo.módulo`: `1.1`, `1.2`, `2.1` e assim por diante.
 
 O Capítulo 1 está publicado com estes módulos:
 
-1. WebMCP, MCP e a Web agêntica;
-2. ambiente de desenvolvimento;
-3. API declarativa;
-4. API imperativa.
+1. Descoberta de ferramentas;
+2. Execução de ferramentas;
+3. Cross-origin e permissões;
+4. Loop conversacional.
 
-Os capítulos 2 (Design de ferramentas), 3 (Integração com a aplicação) e 4 (Qualidade de Builder) já estão mapeados no índice e serão publicados progressivamente.
+Os capítulos 2 (Raciocínio e políticas), 3 (Adaptadores de modelos) e 4 (Entrega Agent Developer) já estão mapeados no índice e serão publicados progressivamente.
 
 ## Executar localmente
 
@@ -34,7 +34,7 @@ npm run serve
 
 Abra `http://localhost:4173`. O curso também é legível abrindo `index.html`, mas um servidor local representa melhor o contexto de execução.
 
-## Validador avançado
+## Console Page Agent
 
 O laboratório em `labs/validador-tools.html` recebe um descritor JSON auditável. Ele verifica:
 
@@ -45,11 +45,8 @@ O laboratório em `labs/validador-tools.html` recebe um descritor JSON auditáve
 - evidência de `AbortSignal`;
 - risco, confirmação humana, fallback e exemplo de resultado.
 
-O scanner é local, determinístico e não registra nem executa tools. Campos de governança como `risk`, `fallback` e `resultExample` não pertencem ao draft WebMCP; servem para revisar prontidão operacional.
+O console é local, determinístico e não registra nem executa tools. Campos de governança como `risk`, `fallback` e `resultExample` não pertencem ao draft WebMCP; servem para revisar prontidão operacional.
 
-## Laboratório do Módulo 1.1
-
-`labs/inema-cursos.html` mantém a mesma busca em três modos: pessoa, agente visual e WebMCP. A chamada do agente é uma simulação didática explicitamente identificada; em ambientes compatíveis, a página também tenta registrar `buscar_cursos` pela API real.
 
 ## Especificação e limites
 

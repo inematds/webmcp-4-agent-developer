@@ -8,7 +8,7 @@
   <script>
     (function(){try{var h=document.documentElement,p=JSON.parse(localStorage.getItem('inema.prefs')||'{}'),t=p.theme||(localStorage.getItem('theme')==='light'?'claro':'inema-dark');if(t==='claro'||t==='sepia')h.classList.remove('dark');else h.classList.add('dark');if(['sepia','foco','contraste'].includes(t))h.setAttribute('data-theme',t);else h.removeAttribute('data-theme');if(p.fontScale)h.style.fontSize=p.fontScale+'%';}catch(e){document.documentElement.classList.add('dark')}})();
   </script>
-  <title>Validador avançado de tools e schemas | WebMCP Builder</title>
+  <title>Validador avançado de tools e schemas | WebMCP Agent Developer</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>tailwind.config={darkMode:'class',theme:{extend:{colors:{primary:'#FACC15',dark:{900:'#111827',800:'#1f2937',700:'#374151',600:'#4b5563'}}}}};</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,122 +22,32 @@
   "course": "webmcp-zero-expert",
   "tracks": [
     {
-      "n": "1",
-      "title": "WebMCP Builder",
-      "modules": [
-        {
-          "id": "1-1",
-          "title": "WebMCP, MCP e a Web agêntica",
-          "topics": 6,
-          "href": "https://inematds.github.io/webmcp-2-builder/curso/builder/modulo-1-1.html"
-        },
-        {
-          "id": "1-2",
-          "title": "Ambiente de desenvolvimento",
-          "topics": 6,
-          "href": "https://inematds.github.io/webmcp-2-builder/curso/builder/modulo-1-2.html"
-        },
-        {
-          "id": "1-3",
-          "title": "API declarativa",
-          "topics": 6,
-          "href": "https://inematds.github.io/webmcp-2-builder/curso/builder/modulo-1-3.html"
-        },
-        {
-          "id": "1-4",
-          "title": "API imperativa",
-          "topics": 6,
-          "href": "https://inematds.github.io/webmcp-2-builder/curso/builder/modulo-1-4.html"
-        }
-      ]
-    },
-    {
-      "n": "2",
-      "title": "WebMCP Integrator",
-      "modules": [
-        {
-          "id": "2-5",
-          "title": "Boas ferramentas",
-          "topics": 6,
-          "href": "https://inematds.github.io/webmcp-3-integrator/"
-        },
-        {
-          "id": "2-6",
-          "title": "Estado, erros e recuperação",
-          "topics": 6,
-          "href": "https://inematds.github.io/webmcp-3-integrator/"
-        },
-        {
-          "id": "2-7",
-          "title": "Sites existentes",
-          "topics": 6,
-          "href": "https://inematds.github.io/webmcp-3-integrator/"
-        },
-        {
-          "id": "2-8",
-          "title": "Frameworks modernos",
-          "topics": 6,
-          "href": "https://inematds.github.io/webmcp-3-integrator/"
-        }
-      ]
-    },
-    {
       "n": "3",
       "title": "WebMCP Agent Developer",
       "modules": [
         {
-          "id": "3-9",
+          "id": "3-1",
           "title": "Descoberta de ferramentas",
           "topics": 6,
-          "href": "https://inematds.github.io/webmcp-4-agent-developer/"
+          "href": "https://inematds.github.io/webmcp-4-agent-developer/curso/agent/modulo-3-1.html"
         },
         {
-          "id": "3-10",
+          "id": "3-2",
           "title": "Execução de ferramentas",
           "topics": 6,
-          "href": "https://inematds.github.io/webmcp-4-agent-developer/"
+          "href": "https://inematds.github.io/webmcp-4-agent-developer/curso/agent/modulo-3-2.html"
         },
         {
-          "id": "3-11",
+          "id": "3-3",
           "title": "Cross-origin e permissões",
           "topics": 6,
-          "href": "https://inematds.github.io/webmcp-4-agent-developer/"
+          "href": "https://inematds.github.io/webmcp-4-agent-developer/curso/agent/modulo-3-3.html"
         },
         {
-          "id": "3-12",
+          "id": "3-4",
           "title": "Loop conversacional",
           "topics": 6,
-          "href": "https://inematds.github.io/webmcp-4-agent-developer/"
-        }
-      ]
-    },
-    {
-      "n": "4",
-      "title": "WebMCP Expert",
-      "modules": [
-        {
-          "id": "4-13",
-          "title": "Segurança",
-          "topics": 6,
-          "href": "https://inematds.github.io/webmcp-5-expert/"
-        },
-        {
-          "id": "4-14",
-          "title": "WebMCP, backend e MCP",
-          "topics": 6,
-          "href": "https://inematds.github.io/webmcp-5-expert/"
-        },
-        {
-          "id": "4-15",
-          "title": "Evals e observabilidade",
-          "topics": 6,
-          "href": "https://inematds.github.io/webmcp-5-expert/"
-        },
-        {
-          "id": "4-16",
-          "title": "Produção e governança",
-          "topics": 6,
-          "href": "https://inematds.github.io/webmcp-5-expert/"
+          "href": "https://inematds.github.io/webmcp-4-agent-developer/curso/agent/modulo-3-4.html"
         }
       ]
     }
@@ -151,18 +61,18 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center min-h-16 gap-3">
       <div class="flex items-center gap-3 min-w-0">
-        <a href="../index.html" class="flex items-center gap-2 text-yellow-400 hover:text-yellow-300 flex-shrink-0" aria-label="WebMCP Builder — início">
-          <span class="text-2xl" aria-hidden="true">⬡</span><span class="font-bold hidden sm:inline">WebMCP Builder</span><span class="font-bold sm:hidden">W2</span>
+        <a href="../index.html" class="flex items-center gap-2 text-yellow-400 hover:text-yellow-300 flex-shrink-0" aria-label="WebMCP Agent Developer — início">
+          <span class="text-2xl" aria-hidden="true">⬡</span><span class="font-bold hidden sm:inline">WebMCP Agent Developer</span><span class="font-bold sm:hidden">W4</span>
         </a>
         <span class="text-neutral-600 hidden sm:inline">|</span>
         <a href="https://inema.club" target="_blank" rel="noreferrer" class="text-sky-400 hover:text-sky-300 text-sm font-medium hidden sm:inline">INEMA.CLUB</a>
       </div>
       <div class="flex items-center gap-1">
         <div class="hidden lg:flex items-center gap-1">
-          <a class="phase-chip px-2.5 py-1.5 rounded-lg text-sm font-semibold" aria-current="page" href="../index.html#capitulo-1">Cap. 1<span class="hidden xl:inline"> · Fundamentos</span></a>
-          <a class="phase-chip px-2.5 py-1.5 rounded-lg text-sm text-neutral-400 hover:text-emerald-400"  href="../index.html#capitulo-2">Cap. 2<span class="hidden xl:inline"> · Design</span></a>
-          <a class="phase-chip px-2.5 py-1.5 rounded-lg text-sm text-neutral-400 hover:text-emerald-400"  href="../index.html#capitulo-3">Cap. 3<span class="hidden xl:inline"> · Integração</span></a>
-          <a class="phase-chip px-2.5 py-1.5 rounded-lg text-sm text-neutral-400 hover:text-emerald-400"  href="../index.html#capitulo-4">Cap. 4<span class="hidden xl:inline"> · Qualidade</span></a>
+          <a class="phase-chip px-2.5 py-1.5 rounded-lg text-sm font-semibold" aria-current="page" href="../index.html#capitulo-1">Cap. 1<span class="hidden xl:inline"> · Núcleo</span></a>
+          <a class="phase-chip px-2.5 py-1.5 rounded-lg text-sm text-neutral-400 hover:text-purple-400"  href="../index.html#capitulo-2">Cap. 2<span class="hidden xl:inline"> · Raciocínio</span></a>
+          <a class="phase-chip px-2.5 py-1.5 rounded-lg text-sm text-neutral-400 hover:text-purple-400"  href="../index.html#capitulo-3">Cap. 3<span class="hidden xl:inline"> · Adaptadores</span></a>
+          <a class="phase-chip px-2.5 py-1.5 rounded-lg text-sm text-neutral-400 hover:text-purple-400"  href="../index.html#capitulo-4">Cap. 4<span class="hidden xl:inline"> · Entrega</span></a>
           <a class="phase-chip px-2.5 py-1.5 rounded-lg text-sm text-sky-400 hover:text-sky-300" href="../labs/validador-tools.html">Laboratórios</a>
         </div>
         <button type="button" data-inema-journey-open class="p-2 rounded-lg text-neutral-300 hover:bg-dark-700" aria-label="Abrir minha jornada"><span aria-hidden="true">◷</span><span data-inema-journey-badge class="inema-journey-badge" data-count="0"></span></button>
@@ -181,39 +91,39 @@
         </button>
       </div>
     </div>
-    <div class="lg:hidden flex items-center gap-1 overflow-x-auto pb-2" aria-label="Capítulos do WebMCP Builder">
+    <div class="lg:hidden flex items-center gap-1 overflow-x-auto pb-2" aria-label="Capítulos do WebMCP Agent Developer">
       <a class="phase-chip flex-shrink-0 px-3 py-2 rounded-lg text-xs font-semibold" aria-current="page" href="../index.html#capitulo-1">Cap. 1</a>
-      <a class="phase-chip flex-shrink-0 px-3 py-2 rounded-lg text-xs text-neutral-400 hover:text-emerald-400"  href="../index.html#capitulo-2">Cap. 2</a>
-      <a class="phase-chip flex-shrink-0 px-3 py-2 rounded-lg text-xs text-neutral-400 hover:text-emerald-400"  href="../index.html#capitulo-3">Cap. 3</a>
-      <a class="phase-chip flex-shrink-0 px-3 py-2 rounded-lg text-xs text-neutral-400 hover:text-emerald-400"  href="../index.html#capitulo-4">Cap. 4</a>
+      <a class="phase-chip flex-shrink-0 px-3 py-2 rounded-lg text-xs text-neutral-400 hover:text-purple-400"  href="../index.html#capitulo-2">Cap. 2</a>
+      <a class="phase-chip flex-shrink-0 px-3 py-2 rounded-lg text-xs text-neutral-400 hover:text-purple-400"  href="../index.html#capitulo-3">Cap. 3</a>
+      <a class="phase-chip flex-shrink-0 px-3 py-2 rounded-lg text-xs text-neutral-400 hover:text-purple-400"  href="../index.html#capitulo-4">Cap. 4</a>
       <a class="phase-chip flex-shrink-0 px-3 py-2 rounded-lg text-xs text-sky-400" href="../labs/validador-tools.html">Labs</a>
     </div>
   </div>
 </nav>
 <main id="conteudo">
-  <header class="hero-shell builder-hero border-b border-dark-600">
+  <header class="hero-shell agent-hero border-b border-dark-600">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid lg:grid-cols-[1fr_.9fr] gap-12 items-center">
       <div>
-        <span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-4">SCANNER AVANÇADO · BUILDER</span>
-        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">Valide tools antes de registrar</h1>
-        <p class="text-lg text-neutral-300 mt-5 leading-relaxed">Cole um descritor auditável em JSON. O laboratório separa requisitos do draft, qualidade de contrato e prontidão operacional.</p>
+        <span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">CONSOLE AVANÇADO · AGENT DEVELOPER</span>
+        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">Inspecione o contexto antes de chamar o modelo</h1>
+        <p class="text-lg text-neutral-300 mt-5 leading-relaxed">Cole um catálogo em JSON. O console verifica se descritores, schemas, risco e evidências são adequados ao pipeline de descoberta e execução.</p>
         <div class="flex justify-start flex-wrap gap-3 mt-7">
-          <button id="load-example" type="button" class="px-5 py-3 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-semibold">Carregar exemplo</button>
-          <a href="../curso/builder/modulo-1-4.html" class="px-5 py-3 rounded-lg border border-dark-600 hover:bg-dark-700">Revisar API imperativa</a>
+          <button id="load-example" type="button" class="px-5 py-3 rounded-lg bg-purple-600 hover:bg-purple-500 text-white font-semibold">Carregar exemplo</button>
+          <a href="../curso/agent/modulo-3-4.html" class="px-5 py-3 rounded-lg border border-dark-600 hover:bg-dark-700">Revisar o loop conversacional</a>
         </div>
       </div>
-      <div class="rounded-2xl border border-emerald-500/30 bg-dark-900/40 p-4 overflow-hidden">
+      <div class="rounded-2xl border border-purple-500/30 bg-dark-900/40 p-4 overflow-hidden">
   <svg viewBox="0 0 900 260" class="w-full h-auto" role="img" aria-label="Fluxo JSON auditável para 24 verificações para Plano de correção">
     <defs>
-      <linearGradient id="validator-hero-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#34d399"/><stop offset="1" stop-color="#10b981"/></linearGradient>
+      <linearGradient id="validator-hero-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c084fc"/><stop offset="1" stop-color="#3b82f6"/></linearGradient>
       <filter id="validator-hero-glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-      <pattern id="validator-hero-grid" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="1.2" cy="1.2" r="1.2" fill="#34d399" opacity=".12"/></pattern>
+      <pattern id="validator-hero-grid" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="1.2" cy="1.2" r="1.2" fill="#c084fc" opacity=".12"/></pattern>
       <marker id="validator-hero-arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L8,4.5 L0,9 L2.4,4.5 Z" fill="#38bdf8"/></marker>
     </defs>
     <rect width="900" height="260" fill="url(#validator-hero-grid)"/>
     <path d="M250 130 H365 M535 130 H650" stroke="#38bdf8" stroke-width="1.8" opacity=".65" marker-end="url(#validator-hero-arrow)"/>
-    <g><rect x="45" y="92" width="205" height="76" rx="14" fill="#0e2018" stroke="#34d399" stroke-width="2"/><text x="147" y="125" text-anchor="middle" fill="#34d399" font-family="Inter,sans-serif" font-size="17" font-weight="600">JSON auditável</text><text x="147" y="148" text-anchor="middle" fill="#a7f3d0" font-family="Inter,sans-serif" font-size="12">entrada observável</text></g>
-    <g filter="url(#validator-hero-glow)"><rect x="365" y="82" width="170" height="96" rx="14" fill="url(#validator-hero-grad)" stroke="#34d399" stroke-width="2"/></g><text x="450" y="125" text-anchor="middle" fill="#06281d" font-family="Inter,sans-serif" font-size="17" font-weight="600">24 verificações</text><text x="450" y="149" text-anchor="middle" fill="#064e3b" font-family="Inter,sans-serif" font-size="12">contrato explícito</text>
+    <g><rect x="45" y="92" width="205" height="76" rx="14" fill="#1a1230" stroke="#c084fc" stroke-width="2"/><text x="147" y="125" text-anchor="middle" fill="#c084fc" font-family="Inter,sans-serif" font-size="17" font-weight="600">JSON auditável</text><text x="147" y="148" text-anchor="middle" fill="#bfdbfe" font-family="Inter,sans-serif" font-size="12">entrada observável</text></g>
+    <g filter="url(#validator-hero-glow)"><rect x="365" y="82" width="170" height="96" rx="14" fill="url(#validator-hero-grad)" stroke="#c084fc" stroke-width="2"/></g><text x="450" y="125" text-anchor="middle" fill="#06281d" font-family="Inter,sans-serif" font-size="17" font-weight="600">24 verificações</text><text x="450" y="149" text-anchor="middle" fill="#064e3b" font-family="Inter,sans-serif" font-size="12">contrato explícito</text>
     <g><rect x="650" y="92" width="205" height="76" rx="14" fill="#0e1b26" stroke="#38bdf8" stroke-width="2"/><text x="752" y="125" text-anchor="middle" fill="#9ad6ff" font-family="Inter,sans-serif" font-size="17" font-weight="600">Plano de correção</text><text x="752" y="148" text-anchor="middle" fill="#bfe6ff" font-family="Inter,sans-serif" font-size="12">resultado verificável</text></g>
   </svg>
 </div>
@@ -222,7 +132,7 @@
 
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <div class="grid md:grid-cols-3 gap-4 mb-10">
-      <div class="bg-dark-800 border border-dark-600 rounded-xl p-5"><span class="text-emerald-400 text-sm font-semibold">01 · Contrato</span><p class="text-neutral-400 text-sm mt-2">Nome, título, descrição e unicidade.</p></div>
+      <div class="bg-dark-800 border border-dark-600 rounded-xl p-5"><span class="text-purple-400 text-sm font-semibold">01 · Contrato</span><p class="text-neutral-400 text-sm mt-2">Nome, título, descrição e unicidade.</p></div>
       <div class="bg-dark-800 border border-dark-600 rounded-xl p-5"><span class="text-sky-400 text-sm font-semibold">02 · Schema</span><p class="text-neutral-400 text-sm mt-2">Tipos, propriedades, required e limites.</p></div>
       <div class="bg-dark-800 border border-dark-600 rounded-xl p-5"><span class="text-primary text-sm font-semibold">03 · Operação</span><p class="text-neutral-400 text-sm mt-2">Cancelamento, risco, confirmação e saída.</p></div>
     </div>
@@ -230,7 +140,7 @@
     <div class="grid xl:grid-cols-[1fr_1fr] gap-8 items-start">
       <section class="bg-dark-800 border border-dark-600 rounded-xl overflow-hidden">
         <div class="p-5 border-b border-dark-600">
-          <div class="flex items-center justify-between gap-4"><div><p class="text-xs text-emerald-400 font-semibold">ENTRADA LOCAL</p><h2 class="text-2xl font-bold mt-1">Catálogo em JSON</h2></div><span id="parse-status" class="text-xs text-neutral-400" role="status">Aguardando análise</span></div>
+          <div class="flex items-center justify-between gap-4"><div><p class="text-xs text-purple-400 font-semibold">ENTRADA LOCAL</p><h2 class="text-2xl font-bold mt-1">Catálogo em JSON</h2></div><span id="parse-status" class="text-xs text-neutral-400" role="status">Aguardando análise</span></div>
           <p class="text-sm text-neutral-400 mt-3">Use um array de descritores. Como funções não existem em JSON, declare <code class="text-sky-400">executeBehavior</code> e evidências operacionais separadamente.</p>
         </div>
         <div class="p-5">
@@ -238,7 +148,7 @@
           <textarea id="catalog-input" class="validator-textarea code-shell w-full mt-3" spellcheck="false" aria-describedby="input-help"></textarea>
           <p id="input-help" class="text-xs text-neutral-500 mt-3">Nada é enviado para servidor, registrado em document.modelContext ou executado.</p>
           <div class="flex justify-start flex-wrap gap-3 mt-5">
-            <button id="run-validator" type="button" class="px-5 py-3 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-semibold">Analisar catálogo</button>
+            <button id="run-validator" type="button" class="px-5 py-3 rounded-lg bg-purple-600 hover:bg-purple-500 text-white font-semibold">Analisar catálogo</button>
             <button id="clear-validator" type="button" class="px-5 py-3 rounded-lg bg-dark-700 hover:bg-dark-600">Limpar</button>
           </div>
         </div>
@@ -247,10 +157,10 @@
       <section aria-live="polite">
         <div class="bg-dark-800 border border-dark-600 rounded-xl p-6 mb-6">
           <div class="flex flex-col sm:flex-row sm:items-center gap-6">
-            <div class="relative w-28 h-28 rounded-full score-gauge flex-shrink-0" id="score-gauge" style="--score:0;--gauge-color:#34d399"><div class="absolute inset-0 z-10 flex flex-col items-center justify-center"><strong id="score-value" class="text-3xl">0</strong><span class="text-xs text-neutral-400">de 100</span></div></div>
-            <div><p id="score-label" class="text-emerald-400 text-sm font-semibold">Sem diagnóstico</p><h2 class="text-2xl font-bold mt-1">Qualidade do catálogo</h2><p id="score-summary" class="text-neutral-400 mt-2">Carregue o exemplo ou cole seu JSON para começar.</p></div>
+            <div class="relative w-28 h-28 rounded-full score-gauge flex-shrink-0" id="score-gauge" style="--score:0;--gauge-color:#c084fc"><div class="absolute inset-0 z-10 flex flex-col items-center justify-center"><strong id="score-value" class="text-3xl">0</strong><span class="text-xs text-neutral-400">de 100</span></div></div>
+            <div><p id="score-label" class="text-purple-400 text-sm font-semibold">Sem diagnóstico</p><h2 class="text-2xl font-bold mt-1">Qualidade do catálogo</h2><p id="score-summary" class="text-neutral-400 mt-2">Carregue o exemplo ou cole seu JSON para começar.</p></div>
           </div>
-          <div class="grid grid-cols-3 gap-3 mt-6"><div class="bg-dark-700 rounded-lg p-3"><strong id="count-pass" class="text-emerald-400 text-xl">0</strong><p class="text-xs text-neutral-400">Passou</p></div><div class="bg-dark-700 rounded-lg p-3"><strong id="count-warn" class="text-primary text-xl">0</strong><p class="text-xs text-neutral-400">Atenções</p></div><div class="bg-dark-700 rounded-lg p-3"><strong id="count-fail" class="text-red-400 text-xl">0</strong><p class="text-xs text-neutral-400">Falhas</p></div></div>
+          <div class="grid grid-cols-3 gap-3 mt-6"><div class="bg-dark-700 rounded-lg p-3"><strong id="count-pass" class="text-purple-400 text-xl">0</strong><p class="text-xs text-neutral-400">Passou</p></div><div class="bg-dark-700 rounded-lg p-3"><strong id="count-warn" class="text-primary text-xl">0</strong><p class="text-xs text-neutral-400">Atenções</p></div><div class="bg-dark-700 rounded-lg p-3"><strong id="count-fail" class="text-red-400 text-xl">0</strong><p class="text-xs text-neutral-400">Falhas</p></div></div>
         </div>
         <div id="tool-summary" class="space-y-4 mb-6"></div>
         <div id="findings" class="space-y-3"><div class="bg-dark-800 border border-dark-600 rounded-xl p-6 text-neutral-400">Os achados aparecerão aqui, priorizados por impacto.</div></div>
@@ -259,11 +169,11 @@
 
     <section class="mt-12 grid lg:grid-cols-2 gap-8">
       <div class="bg-primary/10 border border-primary/30 rounded-xl p-6"><h2 class="text-xl font-bold text-primary">O que este scanner não prova</h2><ul class="text-neutral-300 mt-4 space-y-2"><li>• suporte nativo do navegador;</li><li>• autorização do backend;</li><li>• segurança do código execute;</li><li>• qualidade real sem testes de execução.</li></ul></div>
-      <div class="bg-dark-800 border border-blue-500/30 rounded-xl p-6"><h2 class="text-xl font-bold text-blue-400">Próximos scanners da formação</h2><ul class="text-neutral-300 mt-4 space-y-2"><li>• Integrator: crawler multipágina e sitemap;</li><li>• Agent Developer: descoberta e execução controlada;</li><li>• Expert: segurança, evals e observabilidade.</li></ul></div>
+      <div class="bg-dark-800 border border-purple-500/30 rounded-xl p-6"><h2 class="text-xl font-bold text-purple-400">Próximos laboratórios da formação</h2><ul class="text-neutral-300 mt-4 space-y-2"><li>• seletor de tools com dataset;</li><li>• executor com policy gate;</li><li>• avaliação de conversas completas.</li></ul></div>
     </section>
   </section>
 </main>
-<footer class="border-t border-dark-600 py-8"><div class="max-w-7xl mx-auto px-4 text-sm text-neutral-500">Validador local · não executa tools · Formação WebMCP Builder</div></footer>
+<footer class="border-t border-dark-600 py-8"><div class="max-w-7xl mx-auto px-4 text-sm text-neutral-500">Validador local · não executa tools · Formação WebMCP Agent Developer</div></footer>
 <script>
 function toggleTopic(button){const item=button.closest('.topic-item');const panel=item.querySelector('.topic-explanation');const card=button.closest('[data-inema-module]');card.querySelectorAll('.topic-explanation.active').forEach(x=>{if(x!==panel){x.classList.remove('active');const b=x.previousElementSibling;if(b)b.setAttribute('aria-expanded','false')}});panel.classList.toggle('active');button.setAttribute('aria-expanded',panel.classList.contains('active')?'true':'false')}
 function openModal(id){const m=document.getElementById(id);if(m){m.classList.remove('hidden');document.body.style.overflow='hidden';m.querySelector('button')?.focus()}}

@@ -266,8 +266,15 @@ resource: "enrollments"</code></pre>
   </div>
 </div>
   
-  <pre class="code-shell mb-6"><code>const sameOrigin = new URL(target).origin === location.origin;
-if (!sameOrigin) return requireExplicitPolicy(target);</code></pre>
+  <pre class="code-shell mb-6"><code>const lifecycle = new AbortController();
+
+await document.modelContext.registerTool(tool, {
+  exposedTo: ["https://agent.example"],
+  signal: lifecycle.signal
+});
+
+// Same-origin é o padrão. Cross-origin exige origem explícita e confiável.</code></pre>
+  <div class="bg-primary/10 border border-primary/30 rounded-xl p-6 mb-6"><h3 class="font-semibold text-primary">Três controles diferentes</h3><p class="text-neutral-300 mt-3"><code>exposedTo</code> seleciona origens autorizadas a descobrir a tool; a Permissions Policy <code>tools</code> controla delegação no documento; o backend ainda autentica a pessoa e autoriza cada efeito.</p></div>
   <details class="bg-dark-800 border border-dark-600 rounded-xl p-6 mb-6">
     <summary class="font-semibold text-sky-400 cursor-pointer">Indo mais fundo: evidência que vale guardar</summary>
     <div class="mt-4 space-y-3 text-sm text-neutral-300">
@@ -347,8 +354,14 @@ if (!sameOrigin) return requireExplicitPolicy(target);</code></pre>
   <p class="text-neutral-300 mt-3">Se a etapa 2 reprovar, a tool não tenta “dar um jeito”: ela devolve uma recuperação explícita.</p>
 </div>
   
-  <pre class="code-shell mb-6"><code>const context = { frameId, origin: frame.location.origin, sandboxFlags };
-catalog.attachContext(context);</code></pre>
+  <pre class="code-shell mb-6"><code>const tools = await document.modelContext.getTools({
+  fromOrigins: ["https://agent.example"]
+});
+const selected = tools.find((tool) =&gt; tool.name === "buscar_cursos");
+
+// RegisteredTool preserva origem e Window do contexto registrador.
+assertTrusted(selected.origin);
+runOnlyWhileConnected(selected.window);</code></pre>
   <details class="bg-dark-800 border border-dark-600 rounded-xl p-6 mb-6">
     <summary class="font-semibold text-sky-400 cursor-pointer">Indo mais fundo: evidência que vale guardar</summary>
     <div class="mt-4 space-y-3 text-sm text-neutral-300">
@@ -616,7 +629,7 @@ catalog.attachContext(context);</code></pre>
 </div>
 </section>
       <section class="mb-12"><div class="bg-gradient-to-br from-purple-900/40 via-dark-800 to-dark-800 rounded-xl border border-purple-500/30 p-8"><h2 class="text-2xl font-bold mb-6">📦 Entrega do módulo</h2><p class="text-neutral-300 mb-6">Desenhar uma matriz de autoridade para um agente que navega entre catálogo público, área autenticada e serviço externo.</p><div class="grid md:grid-cols-2 gap-6 mb-8"><div class="bg-purple-900/20 border border-purple-500/30 rounded-xl p-5"><h3 class="text-purple-400 font-semibold">Critério de aceite</h3><p class="text-neutral-300 text-sm mt-2">A entrega funciona com suporte WebMCP e mantém o caminho manual quando a API não existe.</p></div><div class="bg-sky-900/20 border border-sky-500/30 rounded-xl p-5"><h3 class="text-sky-400 font-semibold">Evidência</h3><p class="text-neutral-300 text-sm mt-2">Inclua código, cenário testado, resultado observado e uma limitação conhecida.</p></div></div><div class="flex justify-start flex-wrap gap-3"><a href="../../index.html" class="px-5 py-3 rounded-lg bg-dark-700 hover:bg-dark-600">← Voltar para a trilha</a><a href="modulo-3-4.html" class="px-5 py-3 rounded-lg bg-purple-600 hover:bg-purple-500 text-white">Próximo módulo: 1.4 →</a></div></div></section>
-      <section class="border border-dark-600 rounded-xl p-6"><h2 class="text-xl font-bold">Fontes técnicas</h2><ul class="mt-4 space-y-2 text-sm"><li><a class="text-sky-400 hover:text-sky-300" href="https://github.com/webmachinelearning/webmcp" target="_blank" rel="noreferrer">Draft e repositório oficial WebMCP</a></li><li><a class="text-sky-400 hover:text-sky-300" href="https://webmachinelearning.github.io/webmcp/" target="_blank" rel="noreferrer">Especificação renderizada</a></li><li class="text-neutral-400">A API declarativa ainda possui pontos em debate; valide o draft antes de produção.</li></ul></section>
+      <section class="border border-dark-600 rounded-xl p-6"><h2 class="text-xl font-bold">Fontes técnicas</h2><ul class="mt-4 space-y-2 text-sm"><li><a class="text-sky-400 hover:text-sky-300" href="https://github.com/webmachinelearning/webmcp" target="_blank" rel="noreferrer">Draft e repositório oficial WebMCP</a></li><li><a class="text-sky-400 hover:text-sky-300" href="https://webmachinelearning.github.io/webmcp/" target="_blank" rel="noreferrer">Especificação renderizada</a></li><li class="text-neutral-400">Snapshot oficial: 26/08/2026 · commit 41d12f0. A API declarativa permanece experimental; valide o draft antes de produção.</li></ul></section>
     </article>
   </div>
 </main>

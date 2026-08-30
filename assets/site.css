@@ -4,6 +4,8 @@
   --wm-bg: #111827;
   --wm-panel: #1f2937;
   --wm-line: #374151;
+  --phase-accent: #c084fc;
+  --phase-accent-rgb: 192, 132, 252;
 }
 .agent-hero::before {
   background:
@@ -42,8 +44,15 @@
 .finding-card[data-level="fail"] { border-left: 3px solid #f87171; }
 .finding-card[data-level="info"] { border-left: 3px solid #38bdf8; }
 .phase-chip[aria-current="page"] {
-  color: #c084fc;
-  background: rgba(16, 185, 129, .10);
+  color: var(--phase-accent);
+  background: rgba(var(--phase-accent-rgb), .12);
+}
+.chapter-map { transition: border-color .2s ease, background-color .2s ease, outline-color .2s ease; }
+.chapter-map.is-selected {
+  border-color: var(--phase-accent);
+  background-color: rgba(var(--phase-accent-rgb), .07);
+  outline: 2px solid rgba(var(--phase-accent-rgb), .28);
+  outline-offset: 3px;
 }
 
 html { scroll-behavior: smooth; }
@@ -156,6 +165,7 @@ body { font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
 .dark .border-dark-600 { border-color: #374151; }
 .dark .divide-dark-600 > :not([hidden]) ~ :not([hidden]) { border-color: #374151; }
 html:not(.dark) body { background-color: #f8fafc; }
+html:not(.dark) { --phase-accent: #7c3aed; --phase-accent-rgb: 124, 58, 237; }
 html:not(.dark) .bg-dark-900 { background-color: #fff; }
 html:not(.dark) .bg-dark-800 { background-color: #f9fafb; }
 html:not(.dark) .bg-dark-700 { background-color: #f3f4f6; }

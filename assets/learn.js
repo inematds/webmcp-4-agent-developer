@@ -2129,6 +2129,48 @@
     topics.forEach(function (s) { io.observe(s); });
   }
 
+  // navegacao por capitulos: mantem menu, hash e bloco do mapa sincronizados
+  function setupChapterNavigation() {
+    var chapters = Array.prototype.slice.call(document.querySelectorAll('.chapter-map[id^="capitulo-"]'));
+    if (!chapters.length) return;
+    if (document.documentElement.getAttribute('data-inema-chapter-nav') === 'bound') return;
+    document.documentElement.setAttribute('data-inema-chapter-nav', 'bound');
+    var links = Array.prototype.slice.call(document.querySelectorAll('.phase-chip[href*="#capitulo-"]'));
+
+    function hashFor(link) {
+      var href = link.getAttribute('href') || '';
+      var at = href.indexOf('#capitulo-');
+      return at >= 0 ? href.slice(at) : '';
+    }
+
+    function selectChapter(hash) {
+      if (!/^#capitulo-\d+$/.test(hash || '')) hash = '#capitulo-1';
+      var target = document.getElementById(hash.slice(1));
+      if (!target || !target.classList.contains('chapter-map')) return;
+
+      chapters.forEach(function (chapter) {
+        var active = chapter === target;
+        chapter.classList.toggle('is-selected', active);
+        if (active) chapter.setAttribute('aria-current', 'true');
+        else chapter.removeAttribute('aria-current');
+      });
+
+      links.forEach(function (link) {
+        var active = hashFor(link) === hash;
+        link.classList.toggle('is-active', active);
+        if (active) link.setAttribute('aria-current', 'page');
+        else link.removeAttribute('aria-current');
+      });
+    }
+
+    document.addEventListener('click', function (event) {
+      var link = event.target && event.target.closest ? event.target.closest('.phase-chip[href*="#capitulo-"]') : null;
+      if (link) selectChapter(hashFor(link));
+    });
+    window.addEventListener('hashchange', function () { selectChapter(window.location.hash); });
+    selectChapter(window.location.hash);
+  }
+
   function rehydrateAll() {
     // pinta lidos
     try {
@@ -2247,6 +2289,7 @@
     bindGlobalListeners();   // re-entrant via S.bound guard
     rehydrateAll();
     setupTOC();
+    setupChapterNavigation();
 
     // resume automatico opt-in
     if (opts.autoResume) resume();

@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Model origin, identity, consent, and boundaries between the page, agent, backend, and external services." name="description"/>
+<meta content="webmcp-zero-expert" name="inema-course"/>
+<script>
+    (function(){try{var h=document.documentElement,p=JSON.parse(localStorage.getItem('inema.prefs')||'{}'),t=p.theme||(localStorage.getItem('theme')==='light'?'claro':'inema-dark');if(t==='claro'||t==='sepia')h.classList.remove('dark');else h.classList.add('dark');if(['sepia','foco','contraste'].includes(t))h.setAttribute('data-theme',t);else h.removeAttribute('data-theme');if(p.fontScale)h.style.fontSize=p.fontScale+'%';}catch(e){document.documentElement.classList.add('dark')}})();
+  </script>
+<title>Module 1.3 — Cross-Origin and Permissions | WebMCP Agent Developer</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={darkMode:'class',theme:{extend:{colors:{primary:'#FACC15',dark:{900:'#111827',800:'#1f2937',700:'#374151',600:'#4b5563'}}}}};</script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="../../../favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="../../../assets/site.css" rel="stylesheet"/>
+<link href="../../../assets/learn.css" rel="stylesheet"/>
+<script data-inema-manifest="" type="application/json">
+{
+  "course": "webmcp-zero-expert",
+  "tracks": [
+    {
+      "n": "3",
+      "title": "WebMCP Agent Developer",
+      "modules": [
+        {
+          "id": "3-1",
+          "title": "Descoberta de ferramentas",
+          "topics": 6,
+          "href": "https://inematds.github.io/webmcp-4-agent-developer/curso/agent/modulo-3-1.html"
+        },
+        {
+          "id": "3-2",
+          "title": "Execução de ferramentas",
+          "topics": 6,
+          "href": "https://inematds.github.io/webmcp-4-agent-developer/curso/agent/modulo-3-2.html"
+        },
+        {
+          "id": "3-3",
+          "title": "Cross-origin e permissões",
+          "topics": 6,
+          "href": "https://inematds.github.io/webmcp-4-agent-developer/curso/agent/modulo-3-3.html"
+        },
+        {
+          "id": "3-4",
+          "title": "Loop conversacional",
+          "topics": 6,
+          "href": "https://inematds.github.io/webmcp-4-agent-developer/curso/agent/modulo-3-4.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link href="https://inematds.github.io/webmcp-4-agent-developer/curso/agent/modulo-3-3.html" hreflang="pt-BR" rel="alternate"/><link href="https://inematds.github.io/webmcp-4-agent-developer/en/curso/agent/modulo-3-3.html" hreflang="en" rel="alternate"/><link href="https://inematds.github.io/webmcp-4-agent-developer/es/curso/agent/modulo-3-3.html" hreflang="es" rel="alternate"/></head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="../../../curso/agent/modulo-3-3.html" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">PT</a><a href="modulo-3-3.html" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">EN</a><a href="../../../es/curso/agent/modulo-3-3.html" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">ES</a></div>
+<a class="skip" href="#conteudo">Go to content</a>
+<nav aria-label="Main navigation" class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center min-h-16 gap-3">
+<div class="flex items-center gap-3 min-w-0">
+<a aria-label="WebMCP Agent Developer — introduction" class="flex items-center gap-2 text-yellow-400 hover:text-yellow-300 flex-shrink-0" href="../../index.html">
+<span aria-hidden="true" class="text-2xl">⬡</span><span class="font-bold hidden sm:inline">WebMCP Agent Developer</span><span class="font-bold sm:hidden">W4</span>
+</a>
+<span class="text-neutral-600 hidden sm:inline">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium hidden sm:inline" href="https://inema.club" rel="noreferrer" target="_blank">INEMA.CLUB</a>
+</div>
+<div class="flex items-center gap-1">
+<div class="hidden lg:flex items-center gap-1">
+<a aria-current="page" class="phase-chip px-2.5 py-1.5 rounded-lg text-sm font-semibold" href="../../index.html#capitulo-1">Ch. 1<span class="hidden xl:inline"> · Core</span></a>
+<a class="phase-chip px-2.5 py-1.5 rounded-lg text-sm text-neutral-400 hover:text-purple-400" href="../../index.html#capitulo-2">Ch. 2<span class="hidden xl:inline"> · Reasoning</span></a>
+<a class="phase-chip px-2.5 py-1.5 rounded-lg text-sm text-neutral-400 hover:text-purple-400" href="../../index.html#capitulo-3">Ch. 3<span class="hidden xl:inline"> · Adapters</span></a>
+<a class="phase-chip px-2.5 py-1.5 rounded-lg text-sm text-neutral-400 hover:text-purple-400" href="../../index.html#capitulo-4">Ch. 4<span class="hidden xl:inline"> · Delivery</span></a>
+<a class="phase-chip px-2.5 py-1.5 rounded-lg text-sm text-sky-400 hover:text-sky-300" href="../../labs/validador-tools.html">Labs</a>
+</div>
+<button aria-label="Open my journey" class="p-2 rounded-lg text-neutral-300 hover:bg-dark-700" data-inema-journey-open="" type="button"><span aria-hidden="true">◷</span><span class="inema-journey-badge" data-count="0" data-inema-journey-badge=""></span></button>
+<div class="relative">
+<button aria-expanded="false" aria-label="Adjust appearance" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600" data-inema-appearance-toggle="[data-inema-appearance]" type="button">◑</button>
+<div class="inema-appearance-pop right-0 mt-3" data-inema-appearance="">
+<p class="text-sm font-semibold mb-2">Theme</p>
+<div class="inema-segment"><button data-inema-set-theme="inema-dark">Dark</button><button data-inema-set-theme="claro">Light</button><button data-inema-set-theme="sepia">Sepia</button><button data-inema-set-theme="foco">Focus</button><button data-inema-set-theme="contraste">Contrast</button></div>
+<p class="text-sm font-semibold mt-4 mb-2">Size</p>
+<div class="inema-segment"><button data-inema-set-fontscale="100">A</button><button data-inema-set-fontscale="112">A+</button><button data-inema-set-fontscale="125">A++</button></div>
+</div>
+</div>
+<button aria-label="Switch between light and dark themes" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+</button>
+</div>
+</div>
+<div aria-label="WebMCP Agent Developer Chapters" class="lg:hidden flex items-center gap-1 overflow-x-auto pb-2">
+<a aria-current="page" class="phase-chip flex-shrink-0 px-3 py-2 rounded-lg text-xs font-semibold" href="../../index.html#capitulo-1">Ch. 1</a>
+<a class="phase-chip flex-shrink-0 px-3 py-2 rounded-lg text-xs text-neutral-400 hover:text-purple-400" href="../../index.html#capitulo-2">Ch. 2</a>
+<a class="phase-chip flex-shrink-0 px-3 py-2 rounded-lg text-xs text-neutral-400 hover:text-purple-400" href="../../index.html#capitulo-3">Ch. 3</a>
+<a class="phase-chip flex-shrink-0 px-3 py-2 rounded-lg text-xs text-neutral-400 hover:text-purple-400" href="../../index.html#capitulo-4">Ch. 4</a>
+<a class="phase-chip flex-shrink-0 px-3 py-2 rounded-lg text-xs text-sky-400" href="../../labs/validador-tools.html">Labs</a>
+</div>
+</div>
+</nav>
+<nav aria-label="Breadcrumb" class="max-w-6xl mx-auto px-4 py-4 text-sm text-neutral-400"><a class="hover:text-purple-400" href="../../index.html">Start</a><span class="mx-2">/</span><a class="hover:text-purple-400" href="../../index.html#mapa">Agent Developer</a><span class="mx-2">/</span><span class="text-purple-400">Module 1.3</span></nav>
+<header class="bg-gradient-to-br from-purple-900/30 via-dark-800 to-dark-800 py-12 border-y border-dark-600" data-inema-module="3-3" data-inema-track="3" id="modulo-3-3">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">MODULE 1.3</span><h1 class="text-3xl sm:text-4xl font-bold mb-4">🛂 Cross-origin and permissions</h1><p class="text-lg text-neutral-400 max-w-3xl">Model origin, identity, consent, and boundaries between the page, agent, backend, and external services.</p><div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 max-w-3xl"><div class="bg-dark-800/50 p-3 rounded-lg border border-dark-600"><strong class="text-xl text-purple-400">6</strong><p class="text-xs text-neutral-400">Topics</p></div><div class="bg-dark-800/50 p-3 rounded-lg border border-dark-600"><strong class="text-xl text-purple-400">3h</strong><p class="text-xs text-neutral-400">Load</p></div><div class="bg-dark-800/50 p-3 rounded-lg border border-dark-600"><strong class="text-xl text-purple-400">Agent Developer</strong><p class="text-xs text-neutral-400">Level</p></div><div class="bg-dark-800/50 p-3 rounded-lg border border-dark-600"><strong class="text-xl text-purple-400">Security</strong><p class="text-xs text-neutral-400">Type</p></div></div><div class="inema-meter mt-6 max-w-2xl" data-inema-meter="modulo:3-3"><div class="flex justify-between gap-3 text-sm text-neutral-400 mb-2"><span data-inema-meter-frac="">0 of 6</span><span data-inema-meter-pct="">0%</span></div><div class="inema-bar"><div class="inema-bar__fill" data-inema-meter-fill=""></div></div></div></div>
+</header>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="conteudo">
+<div class="grid lg:grid-cols-[15rem_minmax(0,1fr)] gap-10">
+<aside><nav aria-label="Module index" class="hidden lg:block sticky top-24" data-inema-toc=""><p class="text-sm text-neutral-400 mb-3" data-inema-section-counter="">Section 1 of 6</p><ol class="space-y-1"><li><a class="toc-link block border-l-2 border-dark-600 px-3 py-2 text-sm text-neutral-400 hover:text-purple-400" href="#topico-1">1. Map who speaks for whom</a></li>
+<li><a class="toc-link block border-l-2 border-dark-600 px-3 py-2 text-sm text-neutral-400 hover:text-purple-400" href="#topico-2">2. Use the same-origin policy</a></li>
+<li><a class="toc-link block border-l-2 border-dark-600 px-3 py-2 text-sm text-neutral-400 hover:text-purple-400" href="#topico-3">3. Treat the iframe as a boundary</a></li>
+<li><a class="toc-link block border-l-2 border-dark-600 px-3 py-2 text-sm text-neutral-400 hover:text-purple-400" href="#topico-4">4. Don’t turn CORS into authorization</a></li>
+<li><a class="toc-link block border-l-2 border-dark-600 px-3 py-2 text-sm text-neutral-400 hover:text-purple-400" href="#topico-5">5. Request proportionate consent</a></li>
+<li><a class="toc-link block border-l-2 border-dark-600 px-3 py-2 text-sm text-neutral-400 hover:text-purple-400" href="#topico-6">6. Test cross-context attacks</a></li></ol></nav></aside>
+<article class="min-w-0">
+<section class="mb-16" data-inema-topic="modulo-3-3#topico-1" id="topico-1">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+<div class="flex items-center gap-4 min-w-0">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl flex-shrink-0">1</span>
+<h2 class="text-2xl font-bold">Map who speaks for whom</h2>
+</div>
+<button aria-pressed="false" class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 self-start" data-inema-doubt-toggle="" type="button">
+<span aria-hidden="true">?</span>
+<span>I have a question</span>
+</button>
+</div>
+<div class="inema-prose">
+<p class="text-neutral-300 mb-5 leading-relaxed" data-inema-block="m3-3-t1-p1"><strong class="text-purple-400">What it is:</strong> The page, agent, user, and backend have different identities and authorities.</p>
+<p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m3-3-t1-p2"><strong class="text-purple-400">Why learn:</strong> Confusing these identities creates excessive delegation and authorization bugs.</p>
+</div>
+<div class="rounded-2xl border border-purple-500/30 bg-dark-900/40 p-4 mb-7 overflow-hidden">
+<svg aria-label="Flow Page origin to Permission boundary to Authorized service" class="w-full h-auto" role="img" viewbox="0 0 1000 300">
+<defs>
+<filter height="180%" id="m33-glow" width="180%" x="-40%" y="-40%">
+<fegaussianblur result="b" stddeviation="1.8"></fegaussianblur>
+<femerge><femergenode in="b"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge>
+</filter>
+<marker id="m33-arrow" markerheight="9" markerwidth="9" orient="auto" refx="7" refy="4.5">
+<path d="M0,0 L8,4.5 L0,9 L2.4,4.5 Z" fill="#38bdf8"></path>
+</marker>
+<pattern height="30" id="m33-grid" patternunits="userSpaceOnUse" width="30">
+<circle cx="1.2" cy="1.2" fill="#c084fc" opacity=".12" r="1.2"></circle>
+</pattern>
+</defs>
+<rect fill="url(#m33-grid)" height="300" width="1000"></rect>
+<g fill="none" marker-end="url(#m33-arrow)" opacity=".62" stroke="#38bdf8" stroke-width="1.8">
+<path d="M270 150 H380"></path>
+<path d="M620 150 H730"></path>
+</g>
+<g>
+<rect fill="#1a1230" height="90" rx="14" stroke="#c084fc" stroke-width="2" width="230" x="40" y="105"></rect>
+<text fill="#c084fc" font-family="Inter,sans-serif" font-size="18" font-weight="600" text-anchor="middle" x="155" y="143">Page origin</text>
+<text fill="#d1d5db" font-family="Inter,sans-serif" font-size="13" text-anchor="middle" x="155" y="170">starting state</text>
+</g>
+<g filter="url(#m33-glow)">
+<rect fill="#1a1230" height="110" rx="14" stroke="#c084fc" stroke-width="2" width="240" x="380" y="95"></rect>
+</g>
+<text fill="#c084fc" font-family="Inter,sans-serif" font-size="18" font-weight="600" text-anchor="middle" x="500" y="143">Permission boundary</text>
+<text fill="#d1d5db" font-family="Inter,sans-serif" font-size="13" text-anchor="middle" x="500" y="170">observable decision</text>
+<g>
+<rect fill="#0e1b26" height="90" rx="14" stroke="#38bdf8" stroke-width="2" width="230" x="730" y="105"></rect>
+<text fill="#9ad6ff" font-family="Inter,sans-serif" font-size="18" font-weight="600" text-anchor="middle" x="845" y="143">Authorized service</text>
+<text fill="#bfe6ff" font-family="Inter,sans-serif" font-size="13" text-anchor="middle" x="845" y="170">verifiable result</text>
+</g>
+</svg>
+</div>
+<div class="grid md:grid-cols-2 gap-6 mb-6">
+<div class="bg-purple-900/20 border border-purple-500/30 rounded-xl p-6">
+<h3 class="font-semibold text-purple-400">Before modeling</h3>
+<p class="text-neutral-300 mt-3">Write the person’s request, the current state, and the evidence that will prove completion.</p>
+</div>
+<div class="bg-red-900/20 border border-red-500/30 rounded-xl p-6">
+<h3 class="font-semibold text-red-400">Starting error</h3>
+<p class="text-neutral-300 mt-3">Starting with a function name or a button produces a tool without a clear human goal.</p>
+</div>
+</div>
+<div class="bg-primary/10 border border-primary/30 rounded-xl p-6 mb-6">
+<h3 class="font-semibold text-primary">Predict before opening the code</h3>
+<p class="text-neutral-300 mt-3">What information changes the decision? What effect needs to appear in the interface? Answer before implementing.</p>
+</div>
+<pre class="code-shell mb-6"><code>actor: userSession.id
+agent: browserAgent.instanceId
+origin: location.origin
+resource: "enrollments"</code></pre>
+<details class="bg-dark-800 border border-dark-600 rounded-xl p-6 mb-6">
+<summary class="font-semibold text-sky-400 cursor-pointer">Going deeper: evidence worth keeping</summary>
+<div class="mt-4 space-y-3 text-sm text-neutral-300">
+<p data-inema-block="m3-3-t1-p3">Record the input, previous state, decision made, result, and visible change to the page.</p>
+<p data-inema-block="m3-3-t1-p4">Also include an induced failure and the observed behavior without WebMCP support.</p>
+</div>
+</details>
+<div>
+<h3 class="font-semibold text-purple-400">Key concepts</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-5">
+<div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
+<strong class="text-purple-400 text-xs">01</strong>
+<p class="text-sm text-neutral-300 mt-2">principal</p>
+</div>
+<div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
+<strong class="text-purple-400 text-xs">02</strong>
+<p class="text-sm text-neutral-300 mt-2">delegation</p>
+</div>
+<div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
+<strong class="text-purple-400 text-xs">03</strong>
+<p class="text-sm text-neutral-300 mt-2">session</p>
+</div>
+<div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
+<strong class="text-purple-400 text-xs">04</strong>
+<p class="text-sm text-neutral-300 mt-2">resource</p>
+</div>
+</div>
+</div>
+<div class="flex justify-start mt-7">
+<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30" data-inema-read-toggle="" type="button">
+<span aria-hidden="true" class="inema-read-icon">○</span>
+<span data-inema-read-label="">Mark as read</span>
+</button>
+</div>
+</section>
+<section class="mb-16" data-inema-topic="modulo-3-3#topico-2" id="topico-2">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+<div class="flex items-center gap-4 min-w-0">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl flex-shrink-0">2</span>
+<h2 class="text-2xl font-bold">Use the same-origin policy</h2>
+</div>
+<button aria-pressed="false" class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 self-start" data-inema-doubt-toggle="" type="button">
+<span aria-hidden="true">?</span>
+<span>I have a question</span>
+</button>
+</div>
+<div class="inema-prose">
+<p class="text-neutral-300 mb-5 leading-relaxed" data-inema-block="m3-3-t2-p1"><strong class="text-purple-400">What it is:</strong> Origin combines scheme, host, and port and defines a central boundary of the Web.</p>
+<p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m3-3-t2-p2"><strong class="text-purple-400">Why learn:</strong> A tool registered by a document doesn’t grant unrestricted access to other origins.</p>
+</div>
+<div class="overflow-x-auto border border-dark-600 rounded-xl mb-6">
+<table class="w-full text-left text-sm min-w-[700px]">
+<thead class="bg-dark-700">
+<tr><th class="p-4">Question</th><th class="p-4">Strong contract</th><th class="p-4">Weak contract</th></tr>
+</thead>
+<tbody class="divide-y divide-dark-600">
+<tr><th class="p-4">When should you use it?</th><td class="p-4">The description names the intent and context.</td><td class="p-4">“Does things” or “manages.”</td></tr>
+<tr><th class="p-4">What does it receive?</th><td class="p-4">Only the data you need.</td><td class="p-4">Generic and unlimited object.</td></tr>
+<tr><th class="p-4">What does it return?</th><td class="p-4">Verifiable state and next action.</td><td class="p-4">Text without a protocol.</td></tr>
+<tr><th class="p-4">How does it fail?</th><td class="p-4">Code, rationale, and recovery.</td><td class="p-4">Opaque exception.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="grid md:grid-cols-2 gap-6 mb-6">
+<div class="bg-purple-900/20 border border-purple-500/30 rounded-xl p-6">
+<h3 class="font-semibold text-purple-400">Do it</h3>
+<ul class="mt-4 space-y-2 text-neutral-300"><li>✓ Use specific verbs.</li><li>✓ Define the inputs.</li><li>✓ State the evidence.</li></ul>
+</div>
+<div class="bg-red-900/20 border border-red-500/30 rounded-xl p-6">
+<h3 class="font-semibold text-red-400">Avoid</h3>
+<ul class="mt-4 space-y-2 text-neutral-300"><li>✗ Mix intentions.</li><li>✗ Accept any object.</li><li>✗ Hide effects.</li></ul>
+</div>
+</div>
+<pre class="code-shell mb-6"><code>const lifecycle = new AbortController();
+
+await document.modelContext.registerTool(tool, {
+  exposedTo: ["https://agent.example"],
+  signal: lifecycle.signal
+});
+
+// Same-origin é o padrão. Cross-origin exige origem explícita e confiável.</code></pre>
+<div class="bg-primary/10 border border-primary/30 rounded-xl p-6 mb-6"><h3 class="font-semibold text-primary">Three different controls</h3><p class="text-neutral-300 mt-3"><code>exposedTo</code> selects origins authorized to discover the tool; the Permissions Policy <code>tools</code> controls delegation in the document; the backend still authenticates the person and authorizes each effect.</p></div>
+<details class="bg-dark-800 border border-dark-600 rounded-xl p-6 mb-6">
+<summary class="font-semibold text-sky-400 cursor-pointer">Going deeper: evidence worth keeping</summary>
+<div class="mt-4 space-y-3 text-sm text-neutral-300">
+<p data-inema-block="m3-3-t2-p3">Record the input, previous state, decision made, result, and visible change to the page.</p>
+<p data-inema-block="m3-3-t2-p4">Also include an induced failure and the observed behavior without WebMCP support.</p>
+</div>
+</details>
+<div>
+<h3 class="font-semibold text-purple-400">Key concepts</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-5">
+<div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
+<strong class="text-purple-400 text-xs">01</strong>
+<p class="text-sm text-neutral-300 mt-2">same-origin</p>
+</div>
+<div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
+<strong class="text-purple-400 text-xs">02</strong>
+<p class="text-sm text-neutral-300 mt-2">scheme</p>
+</div>
+<div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
+<strong class="text-purple-400 text-xs">03</strong>
+<p class="text-sm text-neutral-300 mt-2">host</p>
+</div>
+<div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
+<strong class="text-purple-400 text-xs">04</strong>
+<p class="text-sm text-neutral-300 mt-2">port</p>
+</div>
+</div>
+</div>
+<div class="flex justify-start mt-7">
+<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30" data-inema-read-toggle="" type="button">
+<span aria-hidden="true" class="inema-read-icon">○</span>
+<span data-inema-read-label="">Mark as read</span>
+</button>
+</div>
+</section>
+<section class="mb-16" data-inema-topic="modulo-3-3#topico-3" id="topico-3">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+<div class="flex items-center gap-4 min-w-0">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl flex-shrink-0">3</span>
+<h2 class="text-2xl font-bold">Treat the iframe as a boundary</h2>
+</div>
+<button aria-pressed="false" class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 self-start" data-inema-doubt-toggle="" type="button">
+<span aria-hidden="true">?</span>
+<span>I have a question</span>
+</button>
+</div>
+<div class="inema-prose">
+<p class="text-neutral-300 mb-5 leading-relaxed" data-inema-block="m3-3-t3-p1"><strong class="text-purple-400">What it is:</strong> Embedded frames have their own document, origin, and lifecycle.</p>
+<p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m3-3-t3-p2"><strong class="text-purple-400">Why learn:</strong> The agent needs to know which context provides the tool and where its effect will be visible.</p>
+</div>
+<div class="space-y-4 mb-6">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold flex-shrink-0">1</div>
+<div class="flex-1 bg-dark-800 border border-dark-600 rounded-xl p-5"><h3 class="font-semibold">Observe</h3><p class="text-sm text-neutral-400 mt-2">Capture state, input, and context before taking action.</p></div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold flex-shrink-0">2</div>
+<div class="flex-1 bg-dark-800 border border-dark-600 rounded-xl p-5"><h3 class="font-semibold">Decide</h3><p class="text-sm text-neutral-400 mt-2">Validate preconditions and choose the allowed transition.</p></div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold flex-shrink-0">3</div>
+<div class="flex-1 bg-dark-800 border border-dark-600 rounded-xl p-5"><h3 class="font-semibold">Execute</h3><p class="text-sm text-neutral-400 mt-2">Apply the shared rule and respect cancellation.</p></div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold flex-shrink-0">4</div>
+<div class="flex-1 bg-dark-800 border border-dark-600 rounded-xl p-5"><h3 class="font-semibold">Prove</h3><p class="text-sm text-neutral-400 mt-2">Update the interface and return a structured result.</p></div>
+</div>
+</div>
+<div class="bg-primary/10 border border-primary/30 rounded-xl p-6 mb-6">
+<h3 class="font-semibold text-primary">Checkpoint</h3>
+<p class="text-neutral-300 mt-3">If step 2 fails, the tool doesn’t try to “make it work”: it returns an explicit recovery.</p>
+</div>
+<pre class="code-shell mb-6"><code>const tools = await document.modelContext.getTools({
+  fromOrigins: ["https://agent.example"]
+});
+const selected = tools.find((tool) =&gt; tool.name === "buscar_cursos");
+
+// RegisteredTool preserva origem e Window do contexto registrador.
+assertTrusted(selected.origin);
+runOnlyWhileConnected(selected.window);</code></pre>
+<details class="bg-dark-800 border border-dark-600 rounded-xl p-6 mb-6">
+<summary class="font-semibold text-sky-400 cursor-pointer">Going deeper: evidence worth keeping</summary>
+<div class="mt-4 space-y-3 text-sm text-neutral-300">
+<p data-inema-block="m3-3-t3-p3">Record the input, previous state, decision made, result, and visible change to the page.</p>
+<p data-inema-block="m3-3-t3-p4">Also include an induced failure and the observed behavior without WebMCP support.</p>
+</div>
+</details>
+<div>
+<h3 class="font-semibold text-purple-400">Key concepts</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-5">
+<div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
+<strong class="text-purple-400 text-xs">01</strong>
+<p class="text-sm text-neutral-300 mt-2">top frame</p>
+</div>
+<div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
+<strong class="text-purple-400 text-xs">02</strong>
+<p class="text-sm text-neutral-300 mt-2">iframe</p>
+</div>
+<div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
+<strong class="text-purple-400 text-xs">03</strong>
+<p class="text-sm text-neutral-300 mt-2">sandbox</p>
+</div>
+<div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
+<strong class="text-purple-400 text-xs">04</strong>
+<p class="text-sm text-neutral-300 mt-2">context id</p>
+</div>
+</div>
+</div>
+<div class="flex justify-start mt-7">
+<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30" data-inema-read-toggle="" type="button">
+<span aria-hidden="true" class="inema-read-icon">○</span>
+<span data-inema-read-label="">Mark as read</span>
+</button>
+</div>
+</section>
+<section class="mb-16" data-inema-topic="modulo-3-3#topico-4" id="topico-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+<div class="flex items-center gap-4 min-w-0">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl flex-shrink-0">4</span>
+<h2 class="text-2xl font-bold">Don't turn CORS into authorization</h2>
+</div>
+<button aria-pressed="false" class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 self-start" data-inema-doubt-toggle="" type="button">
+<span aria-hidden="true">?</span>
+<span>I have a question</span>
+</button>
+</div>
+<div class="inema-prose">
+<p class="text-neutral-300 mb-5 leading-relaxed" data-inema-block="m3-3-t4-p1"><strong class="text-purple-400">What it is:</strong> CORS controls reading by browser scripts; the backend still validates identity and permission.</p>
+<p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m3-3-t4-p2"><strong class="text-purple-400">Why learn:</strong> A response allowed by CORS may still be forbidden for that user and operation.</p>
+</div>
+<div class="grid lg:grid-cols-[1.1fr_.9fr] gap-6 mb-6">
+<div class="min-w-0">
+<p class="text-xs text-purple-400 font-semibold mb-3">REFERENCE CODE</p>
+<pre class="code-shell"><code>fetch(api, { credentials: "include", signal });
+// servidor valida sessão, escopo e CSRF</code></pre>
+</div>
+<div class="space-y-3 min-w-0">
+<div class="bg-dark-800 border border-dark-600 rounded-xl p-5"><strong class="text-purple-400">Input</strong><p class="text-sm text-neutral-400 mt-2">It is small, described, and validatable.</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-xl p-5"><strong class="text-sky-400">Execution</strong><p class="text-sm text-neutral-400 mt-2">Reuses the application's actual rule.</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-xl p-5"><strong class="text-purple-400">Output</strong><p class="text-sm text-neutral-400 mt-2">Allows you to verify the effect and continue.</p></div>
+</div>
+</div>
+<div class="bg-primary/10 border border-primary/30 rounded-xl p-6 mb-6">
+<h3 class="font-semibold text-primary">Read the code as a contract</h3>
+<p class="text-neutral-300 mt-3">Underline where input is validated, where the effect occurs, where cancellation arrives, and where the UI is updated.</p>
+</div>
+<details class="bg-dark-800 border border-dark-600 rounded-xl p-6 mb-6">
+<summary class="font-semibold text-sky-400 cursor-pointer">Going deeper: evidence worth keeping</summary>
+<div class="mt-4 space-y-3 text-sm text-neutral-300">
+<p data-inema-block="m3-3-t4-p3">Record the input, previous state, decision made, result, and visible change to the page.</p>
+<p data-inema-block="m3-3-t4-p4">Also include an induced failure and the observed behavior without WebMCP support.</p>
+</div>
+</details>
+<div>
+<h3 class="font-semibold text-purple-400">Key concepts</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-5">
+<div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
+<strong class="text-purple-400 text-xs">01</strong>
+<p class="text-sm text-neutral-300 mt-2">CORS</p>
+</div>
+<div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
+<strong class="text-purple-400 text-xs">02</strong>
+<p class="text-sm text-neutral-300 mt-2">credentials</p>
+</div>
+<div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
+<strong class="text-purple-400 text-xs">03</strong>
+<p class="text-sm text-neutral-300 mt-2">backend auth</p>
+</div>
+<div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
+<strong class="text-purple-400 text-xs">04</strong>
+<p class="text-sm text-neutral-300 mt-2">CSRF</p>
+</div>
+</div>
+</div>
+<div class="flex justify-start mt-7">
+<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30" data-inema-read-toggle="" type="button">
+<span aria-hidden="true" class="inema-read-icon">○</span>
+<span data-inema-read-label="">Mark as read</span>
+</button>
+</div>
+</section>
+<section class="mb-16" data-inema-topic="modulo-3-3#topico-5" id="topico-5">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+<div class="flex items-center gap-4 min-w-0">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl flex-shrink-0">5</span>
+<h2 class="text-2xl font-bold">Request proportionate consent</h2>
+</div>
+<button aria-pressed="false" class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 self-start" data-inema-doubt-toggle="" type="button">
+<span aria-hidden="true">?</span>
+<span>I have a question</span>
+</button>
+</div>
+<div class="inema-prose">
+<p class="text-neutral-300 mb-5 leading-relaxed" data-inema-block="m3-3-t5-p1"><strong class="text-purple-400">What it is:</strong> Sensitive actions require clear confirmation that shows the target, effect, and reversibility.</p>
+<p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m3-3-t5-p2"><strong class="text-purple-400">Why learn:</strong> Generic or advance consent doesn’t cover a specific mutation.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-6 mb-6">
+<div class="bg-red-900/20 border border-red-500/30 rounded-xl p-6">
+<h3 class="font-semibold text-red-400">Induced failure</h3>
+<p class="text-neutral-300 mt-3">Run the scenario with missing state, invalid input, or unavailable capability.</p>
+</div>
+<div class="bg-purple-900/20 border border-purple-500/30 rounded-xl p-6">
+<h3 class="font-semibold text-purple-400">Expected recovery</h3>
+<p class="text-neutral-300 mt-3">The response explains what failed, what remains safe, and what action can continue.</p>
+</div>
+</div>
+<div class="bg-dark-800 border border-dark-600 rounded-xl p-6 mb-6">
+<h3 class="font-semibold">Minimum test matrix</h3>
+<div class="grid sm:grid-cols-2 gap-4 mt-4 text-sm text-neutral-300">
+<p>✓ reproducible happy path</p>
+<p>✓ actionable invalid input</p>
+<p>✓ cancellation ends the work</p>
+<p>✓ fallback preserves the user journey</p>
+<p>✓ interface reflects the state</p>
+<p>✓ backend maintains authorization</p>
+</div>
+</div>
+<pre class="code-shell mb-6"><code>confirm({ action: "cancelar inscrição", target: enrollmentId, reversible: false });</code></pre>
+<details class="bg-dark-800 border border-dark-600 rounded-xl p-6 mb-6">
+<summary class="font-semibold text-sky-400 cursor-pointer">Going deeper: evidence worth keeping</summary>
+<div class="mt-4 space-y-3 text-sm text-neutral-300">
+<p data-inema-block="m3-3-t5-p3">Record the input, previous state, decision made, result, and visible change to the page.</p>
+<p data-inema-block="m3-3-t5-p4">Also include an induced failure and the observed behavior without WebMCP support.</p>
+</div>
+</details>
+<div>
+<h3 class="font-semibold text-purple-400">Key concepts</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-5">
+<div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
+<strong class="text-purple-400 text-xs">01</strong>
+<p class="text-sm text-neutral-300 mt-2">just in time</p>
+</div>
+<div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
+<strong class="text-purple-400 text-xs">02</strong>
+<p class="text-sm text-neutral-300 mt-2">effect</p>
+</div>
+<div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
+<strong class="text-purple-400 text-xs">03</strong>
+<p class="text-sm text-neutral-300 mt-2">target</p>
+</div>
+<div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
+<strong class="text-purple-400 text-xs">04</strong>
+<p class="text-sm text-neutral-300 mt-2">reversibility</p>
+</div>
+</div>
+</div>
+<div class="flex justify-start mt-7">
+<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30" data-inema-read-toggle="" type="button">
+<span aria-hidden="true" class="inema-read-icon">○</span>
+<span data-inema-read-label="">Mark as read</span>
+</button>
+</div>
+</section>
+<section class="mb-16" data-inema-topic="modulo-3-3#topico-6" id="topico-6">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+<div class="flex items-center gap-4 min-w-0">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl flex-shrink-0">6</span>
+<h2 class="text-2xl font-bold">Test cross-context attacks</h2>
+</div>
+<button aria-pressed="false" class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 self-start" data-inema-doubt-toggle="" type="button">
+<span aria-hidden="true">?</span>
+<span>I have a question</span>
+</button>
+</div>
+<div class="inema-prose">
+<p class="text-neutral-300 mb-5 leading-relaxed" data-inema-block="m3-3-t6-p1"><strong class="text-purple-400">What it is:</strong> The suite covers tool spoofing, navigation during execution, a removed frame, and an unexpected origin response.</p>
+<p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m3-3-t6-p2"><strong class="text-purple-400">Why learn:</strong> Boundaries only truly exist when adversarial paths are exercised.</p>
+</div>
+<div class="bg-dark-800 border border-dark-600 rounded-xl p-6 mb-6">
+<h3 class="text-xl font-bold">Synthesis exercise</h3>
+<ol class="mt-4 space-y-3 text-neutral-300">
+<li><strong class="text-purple-400">1.</strong> Explain the problem without using the name of the technology.</li>
+<li><strong class="text-purple-400">2.</strong> Design the before and after states.</li>
+<li><strong class="text-purple-400">3.</strong> Implement the smallest functional proof.</li>
+<li><strong class="text-purple-400">4.</strong> Trigger a failure and record the recovery.</li>
+<li><strong class="text-purple-400">5.</strong> Deliver code, evidence, and a known limitation.</li>
+</ol>
+</div>
+<div class="bg-purple-900/20 border border-purple-500/30 rounded-xl p-6 mb-6">
+<h3 class="text-xl font-bold text-purple-400">Module challenge</h3>
+<p class="text-neutral-300 mt-3">Design an authority matrix for an agent that navigates a public catalog, an authenticated area, and an external service.</p>
+</div>
+<div class="bg-primary/10 border border-primary/30 rounded-xl p-6 mb-6">
+<h3 class="font-semibold text-primary">Responsible Agent Developer criterion</h3>
+<p class="text-neutral-300 mt-3">The deliverable must work, explain its limitations, and preserve the human path when the experimental capability is unavailable.</p>
+</div>
+<pre class="code-shell mb-6"><code>esperado: rejeitar resultado quando responseOrigin !== registeredOrigin</code></pre>
+<details class="bg-dark-800 border border-dark-600 rounded-xl p-6 mb-6">
+<summary class="font-semibold text-sky-400 cursor-pointer">Going deeper: evidence worth keeping</summary>
+<div class="mt-4 space-y-3 text-sm text-neutral-300">
+<p data-inema-block="m3-3-t6-p3">Record the input, previous state, decision made, result, and visible change to the page.</p>
+<p data-inema-block="m3-3-t6-p4">Also include an induced failure and the observed behavior without WebMCP support.</p>
+</div>
+</details>
+<div>
+<h3 class="font-semibold text-purple-400">Key concepts</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-5">
+<div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
+<strong class="text-purple-400 text-xs">01</strong>
+<p class="text-sm text-neutral-300 mt-2">spoofing</p>
+</div>
+<div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
+<strong class="text-purple-400 text-xs">02</strong>
+<p class="text-sm text-neutral-300 mt-2">navigation race</p>
+</div>
+<div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
+<strong class="text-purple-400 text-xs">03</strong>
+<p class="text-sm text-neutral-300 mt-2">frame removal</p>
+</div>
+<div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
+<strong class="text-purple-400 text-xs">04</strong>
+<p class="text-sm text-neutral-300 mt-2">origin check</p>
+</div>
+</div>
+</div>
+<div class="flex justify-start mt-7">
+<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30" data-inema-read-toggle="" type="button">
+<span aria-hidden="true" class="inema-read-icon">○</span>
+<span data-inema-read-label="">Mark as read</span>
+</button>
+</div>
+</section>
+<section class="mb-12"><div class="bg-gradient-to-br from-purple-900/40 via-dark-800 to-dark-800 rounded-xl border border-purple-500/30 p-8"><h2 class="text-2xl font-bold mb-6">📦 Module delivery</h2><p class="text-neutral-300 mb-6">Design an authority matrix for an agent that navigates a public catalog, an authenticated area, and an external service.</p><div class="grid md:grid-cols-2 gap-6 mb-8"><div class="bg-purple-900/20 border border-purple-500/30 rounded-xl p-5"><h3 class="text-purple-400 font-semibold">Acceptance criteria</h3><p class="text-neutral-300 text-sm mt-2">The deliverable works with WebMCP support and preserves the manual path when the API is unavailable.</p></div><div class="bg-sky-900/20 border border-sky-500/30 rounded-xl p-5"><h3 class="text-sky-400 font-semibold">Evidence</h3><p class="text-neutral-300 text-sm mt-2">Include code, a tested scenario, the observed result, and a known limitation.</p></div></div><div class="flex justify-start flex-wrap gap-3"><a class="px-5 py-3 rounded-lg bg-dark-700 hover:bg-dark-600" href="../../index.html">← Back to the track</a><a class="px-5 py-3 rounded-lg bg-purple-600 hover:bg-purple-500 text-white" href="modulo-3-4.html">Next module: 1.4 →</a></div></div></section>
+<section class="border border-dark-600 rounded-xl p-6"><h2 class="text-xl font-bold">Technical sources</h2><ul class="mt-4 space-y-2 text-sm"><li><a class="text-sky-400 hover:text-sky-300" href="https://github.com/webmachinelearning/webmcp" rel="noreferrer" target="_blank">WebMCP draft and official repository</a></li><li><a class="text-sky-400 hover:text-sky-300" href="https://webmachinelearning.github.io/webmcp/" rel="noreferrer" target="_blank">Rendered specification</a></li><li class="text-neutral-400">Official snapshot: 26/08/2026 · commit 41d12f0. The declarative API remains experimental; validate the draft before production.</li></ul></section>
+</article>
+</div>
+</main>
+<footer class="border-t border-dark-600 py-8"><div class="max-w-6xl mx-auto px-4 text-sm text-neutral-500">WebMCP Agent Developer · Module 1.3 · INEMA</div></footer>
+<script>
+function toggleTopic(button){const item=button.closest('.topic-item');const panel=item.querySelector('.topic-explanation');const card=button.closest('[data-inema-module]');card.querySelectorAll('.topic-explanation.active').forEach(x=>{if(x!==panel){x.classList.remove('active');const b=x.previousElementSibling;if(b)b.setAttribute('aria-expanded','false')}});panel.classList.toggle('active');button.setAttribute('aria-expanded',panel.classList.contains('active')?'true':'false')}
+function openModal(id){const m=document.getElementById(id);if(m){m.classList.remove('hidden');document.body.style.overflow='hidden';m.querySelector('button')?.focus()}}
+function closeModal(){document.querySelectorAll('.modal').forEach(m=>m.classList.add('hidden'));document.body.style.overflow='auto'}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+const tt=document.getElementById('theme-toggle'),di=document.getElementById('theme-toggle-dark-icon'),li=document.getElementById('theme-toggle-light-icon');function syncTheme(){if(document.documentElement.classList.contains('dark')){li?.classList.remove('hidden');di?.classList.add('hidden')}else{di?.classList.remove('hidden');li?.classList.add('hidden')}}syncTheme();tt?.addEventListener('click',()=>{const next=document.documentElement.classList.contains('dark')?'claro':'inema-dark';if(window.INEMA&&typeof window.INEMA.setPref==='function')window.INEMA.setPref('theme',next);else{document.documentElement.classList.toggle('dark');localStorage.setItem('theme',next==='claro'?'light':'dark')}syncTheme()});
+</script>
+<script src="../../../assets/learn.js"></script>
+<script>if(window.INEMA&&typeof window.INEMA.init==='function')window.INEMA.init();</script>
+</body></html>

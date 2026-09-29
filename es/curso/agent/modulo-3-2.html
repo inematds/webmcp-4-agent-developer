@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="pt-BR">
+<html class="dark" lang="es">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Valide argumentos, aplique políticas e execute tools com timeout, cancelamento e respostas estruturadas." name="description"/>
+<meta content="Valida los argumentos, aplica políticas y ejecuta tools con timeout, cancelación y respuestas estructuradas." name="description"/>
 <meta content="webmcp-zero-expert" name="inema-course"/>
 <script>
     (function(){try{var h=document.documentElement,p=JSON.parse(localStorage.getItem('inema.prefs')||'{}'),t=p.theme||(localStorage.getItem('theme')==='light'?'claro':'inema-dark');if(t==='claro'||t==='sepia')h.classList.remove('dark');else h.classList.add('dark');if(['sepia','foco','contraste'].includes(t))h.setAttribute('data-theme',t);else h.removeAttribute('data-theme');if(p.fontScale)h.style.fontSize=p.fontScale+'%';}catch(e){document.documentElement.classList.add('dark')}})();
   </script>
-<title>Módulo 1.2 — Execução de ferramentas | WebMCP Agent Developer</title>
+<title>Módulo 1.2 — Ejecución de herramientas | WebMCP Agent Developer</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>tailwind.config={darkMode:'class',theme:{extend:{colors:{primary:'#FACC15',dark:{900:'#111827',800:'#1f2937',700:'#374151',600:'#4b5563'}}}}};</script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="../../favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../../../favicon.svg" rel="icon" type="image/svg+xml"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="../../assets/site.css" rel="stylesheet"/>
-<link href="../../assets/learn.css" rel="stylesheet"/>
+<link href="../../../assets/site.css" rel="stylesheet"/>
+<link href="../../../assets/learn.css" rel="stylesheet"/>
 <script data-inema-manifest="" type="application/json">
 {
   "course": "webmcp-zero-expert",
@@ -56,13 +56,13 @@
 }
 </script>
 <link href="https://inematds.github.io/webmcp-4-agent-developer/curso/agent/modulo-3-2.html" hreflang="pt-BR" rel="alternate"/><link href="https://inematds.github.io/webmcp-4-agent-developer/en/curso/agent/modulo-3-2.html" hreflang="en" rel="alternate"/><link href="https://inematds.github.io/webmcp-4-agent-developer/es/curso/agent/modulo-3-2.html" hreflang="es" rel="alternate"/></head>
-<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="modulo-3-2.html" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">PT</a><a href="../../en/curso/agent/modulo-3-2.html" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">EN</a><a href="../../es/curso/agent/modulo-3-2.html" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">ES</a></div>
-<a class="skip" href="#conteudo">Ir para o conteúdo</a>
-<nav aria-label="Navegação principal" class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="../../../curso/agent/modulo-3-2.html" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">PT</a><a href="../../../en/curso/agent/modulo-3-2.html" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">EN</a><a href="modulo-3-2.html" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">ES</a></div>
+<a class="skip" href="#conteudo">Ir al contenido</a>
+<nav aria-label="Navegación principal" class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex justify-between items-center min-h-16 gap-3">
 <div class="flex items-center gap-3 min-w-0">
-<a aria-label="WebMCP Agent Developer — início" class="flex items-center gap-2 text-yellow-400 hover:text-yellow-300 flex-shrink-0" href="../../index.html">
+<a aria-label="WebMCP Agent Developer — inicio" class="flex items-center gap-2 text-yellow-400 hover:text-yellow-300 flex-shrink-0" href="../../index.html">
 <span aria-hidden="true" class="text-2xl">⬡</span><span class="font-bold hidden sm:inline">WebMCP Agent Developer</span><span class="font-bold sm:hidden">W4</span>
 </a>
 <span class="text-neutral-600 hidden sm:inline">|</span>
@@ -71,28 +71,28 @@
 <div class="flex items-center gap-1">
 <div class="hidden lg:flex items-center gap-1">
 <a aria-current="page" class="phase-chip px-2.5 py-1.5 rounded-lg text-sm font-semibold" href="../../index.html#capitulo-1">Cap. 1<span class="hidden xl:inline"> · Núcleo</span></a>
-<a class="phase-chip px-2.5 py-1.5 rounded-lg text-sm text-neutral-400 hover:text-purple-400" href="../../index.html#capitulo-2">Cap. 2<span class="hidden xl:inline"> · Raciocínio</span></a>
+<a class="phase-chip px-2.5 py-1.5 rounded-lg text-sm text-neutral-400 hover:text-purple-400" href="../../index.html#capitulo-2">Cap. 2<span class="hidden xl:inline"> · Razonamiento</span></a>
 <a class="phase-chip px-2.5 py-1.5 rounded-lg text-sm text-neutral-400 hover:text-purple-400" href="../../index.html#capitulo-3">Cap. 3<span class="hidden xl:inline"> · Adaptadores</span></a>
 <a class="phase-chip px-2.5 py-1.5 rounded-lg text-sm text-neutral-400 hover:text-purple-400" href="../../index.html#capitulo-4">Cap. 4<span class="hidden xl:inline"> · Entrega</span></a>
-<a class="phase-chip px-2.5 py-1.5 rounded-lg text-sm text-sky-400 hover:text-sky-300" href="../../labs/validador-tools.html">Laboratórios</a>
+<a class="phase-chip px-2.5 py-1.5 rounded-lg text-sm text-sky-400 hover:text-sky-300" href="../../labs/validador-tools.html">Laboratorios</a>
 </div>
-<button aria-label="Abrir minha jornada" class="p-2 rounded-lg text-neutral-300 hover:bg-dark-700" data-inema-journey-open="" type="button"><span aria-hidden="true">◷</span><span class="inema-journey-badge" data-count="0" data-inema-journey-badge=""></span></button>
+<button aria-label="Abrir mi recorrido" class="p-2 rounded-lg text-neutral-300 hover:bg-dark-700" data-inema-journey-open="" type="button"><span aria-hidden="true">◷</span><span class="inema-journey-badge" data-count="0" data-inema-journey-badge=""></span></button>
 <div class="relative">
-<button aria-expanded="false" aria-label="Ajustar aparência" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600" data-inema-appearance-toggle="[data-inema-appearance]" type="button">◑</button>
+<button aria-expanded="false" aria-label="Ajustar apariencia" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600" data-inema-appearance-toggle="[data-inema-appearance]" type="button">◑</button>
 <div class="inema-appearance-pop right-0 mt-3" data-inema-appearance="">
 <p class="text-sm font-semibold mb-2">Tema</p>
-<div class="inema-segment"><button data-inema-set-theme="inema-dark">Escuro</button><button data-inema-set-theme="claro">Claro</button><button data-inema-set-theme="sepia">Sépia</button><button data-inema-set-theme="foco">Foco</button><button data-inema-set-theme="contraste">Contraste</button></div>
-<p class="text-sm font-semibold mt-4 mb-2">Tamanho</p>
+<div class="inema-segment"><button data-inema-set-theme="inema-dark">Oscuro</button><button data-inema-set-theme="claro">Claro</button><button data-inema-set-theme="sepia">Sepia</button><button data-inema-set-theme="foco">Enfoque</button><button data-inema-set-theme="contraste">Contraste</button></div>
+<p class="text-sm font-semibold mt-4 mb-2">Tamaño</p>
 <div class="inema-segment"><button data-inema-set-fontscale="100">A</button><button data-inema-set-fontscale="112">A+</button><button data-inema-set-fontscale="125">A++</button></div>
 </div>
 </div>
-<button aria-label="Alternar tema claro e escuro" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600" id="theme-toggle">
+<button aria-label="Alternar tema claro y oscuro" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600" id="theme-toggle">
 <svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
 <svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
 </button>
 </div>
 </div>
-<div aria-label="Capítulos do WebMCP Agent Developer" class="lg:hidden flex items-center gap-1 overflow-x-auto pb-2">
+<div aria-label="Capítulos de WebMCP Agent Developer" class="lg:hidden flex items-center gap-1 overflow-x-auto pb-2">
 <a aria-current="page" class="phase-chip flex-shrink-0 px-3 py-2 rounded-lg text-xs font-semibold" href="../../index.html#capitulo-1">Cap. 1</a>
 <a class="phase-chip flex-shrink-0 px-3 py-2 rounded-lg text-xs text-neutral-400 hover:text-purple-400" href="../../index.html#capitulo-2">Cap. 2</a>
 <a class="phase-chip flex-shrink-0 px-3 py-2 rounded-lg text-xs text-neutral-400 hover:text-purple-400" href="../../index.html#capitulo-3">Cap. 3</a>
@@ -101,36 +101,36 @@
 </div>
 </div>
 </nav>
-<nav aria-label="Breadcrumb" class="max-w-6xl mx-auto px-4 py-4 text-sm text-neutral-400"><a class="hover:text-purple-400" href="../../index.html">Início</a><span class="mx-2">/</span><a class="hover:text-purple-400" href="../../index.html#mapa">Agent Developer</a><span class="mx-2">/</span><span class="text-purple-400">Módulo 1.2</span></nav>
+<nav aria-label="Breadcrumb" class="max-w-6xl mx-auto px-4 py-4 text-sm text-neutral-400"><a class="hover:text-purple-400" href="../../index.html">Inicio</a><span class="mx-2">/</span><a class="hover:text-purple-400" href="../../index.html#mapa">Agent Developer</a><span class="mx-2">/</span><span class="text-purple-400">Módulo 1.2</span></nav>
 <header class="bg-gradient-to-br from-purple-900/30 via-dark-800 to-dark-800 py-12 border-y border-dark-600" data-inema-module="3-2" data-inema-track="3" id="modulo-3-2">
-<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">MÓDULO 1.2</span><h1 class="text-3xl sm:text-4xl font-bold mb-4">▶️ Execução de ferramentas</h1><p class="text-lg text-neutral-400 max-w-3xl">Valide argumentos, aplique políticas e execute tools com timeout, cancelamento e respostas estruturadas.</p><div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 max-w-3xl"><div class="bg-dark-800/50 p-3 rounded-lg border border-dark-600"><strong class="text-xl text-purple-400">6</strong><p class="text-xs text-neutral-400">Tópicos</p></div><div class="bg-dark-800/50 p-3 rounded-lg border border-dark-600"><strong class="text-xl text-purple-400">3h</strong><p class="text-xs text-neutral-400">Carga</p></div><div class="bg-dark-800/50 p-3 rounded-lg border border-dark-600"><strong class="text-xl text-purple-400">Agent Developer</strong><p class="text-xs text-neutral-400">Nível</p></div><div class="bg-dark-800/50 p-3 rounded-lg border border-dark-600"><strong class="text-xl text-purple-400">Runtime</strong><p class="text-xs text-neutral-400">Tipo</p></div></div><div class="inema-meter mt-6 max-w-2xl" data-inema-meter="modulo:3-2"><div class="flex justify-between gap-3 text-sm text-neutral-400 mb-2"><span data-inema-meter-frac="">0 de 6</span><span data-inema-meter-pct="">0%</span></div><div class="inema-bar"><div class="inema-bar__fill" data-inema-meter-fill=""></div></div></div></div>
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">MÓDULO 1.2</span><h1 class="text-3xl sm:text-4xl font-bold mb-4">▶️ Ejecución de herramientas</h1><p class="text-lg text-neutral-400 max-w-3xl">Valida los argumentos, aplica políticas y ejecuta tools con timeout, cancelación y respuestas estructuradas.</p><div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 max-w-3xl"><div class="bg-dark-800/50 p-3 rounded-lg border border-dark-600"><strong class="text-xl text-purple-400">6</strong><p class="text-xs text-neutral-400">Temas</p></div><div class="bg-dark-800/50 p-3 rounded-lg border border-dark-600"><strong class="text-xl text-purple-400">3h</strong><p class="text-xs text-neutral-400">Carga</p></div><div class="bg-dark-800/50 p-3 rounded-lg border border-dark-600"><strong class="text-xl text-purple-400">Agent Developer</strong><p class="text-xs text-neutral-400">Nivel</p></div><div class="bg-dark-800/50 p-3 rounded-lg border border-dark-600"><strong class="text-xl text-purple-400">Runtime</strong><p class="text-xs text-neutral-400">Tipo</p></div></div><div class="inema-meter mt-6 max-w-2xl" data-inema-meter="modulo:3-2"><div class="flex justify-between gap-3 text-sm text-neutral-400 mb-2"><span data-inema-meter-frac="">0 de 6</span><span data-inema-meter-pct="">0%</span></div><div class="inema-bar"><div class="inema-bar__fill" data-inema-meter-fill=""></div></div></div></div>
 </header>
 <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="conteudo">
 <div class="grid lg:grid-cols-[15rem_minmax(0,1fr)] gap-10">
-<aside><nav aria-label="Índice do módulo" class="hidden lg:block sticky top-24" data-inema-toc=""><p class="text-sm text-neutral-400 mb-3" data-inema-section-counter="">Seção 1 de 6</p><ol class="space-y-1"><li><a class="toc-link block border-l-2 border-dark-600 px-3 py-2 text-sm text-neutral-400 hover:text-purple-400" href="#topico-1">1. Separe proposta de execução</a></li>
-<li><a class="toc-link block border-l-2 border-dark-600 px-3 py-2 text-sm text-neutral-400 hover:text-purple-400" href="#topico-2">2. Valide o schema novamente</a></li>
-<li><a class="toc-link block border-l-2 border-dark-600 px-3 py-2 text-sm text-neutral-400 hover:text-purple-400" href="#topico-3">3. Aplique política antes do efeito</a></li>
-<li><a class="toc-link block border-l-2 border-dark-600 px-3 py-2 text-sm text-neutral-400 hover:text-purple-400" href="#topico-4">4. Execute com orçamento e cancelamento</a></li>
-<li><a class="toc-link block border-l-2 border-dark-600 px-3 py-2 text-sm text-neutral-400 hover:text-purple-400" href="#topico-5">5. Normalize resultados e falhas</a></li>
-<li><a class="toc-link block border-l-2 border-dark-600 px-3 py-2 text-sm text-neutral-400 hover:text-purple-400" href="#topico-6">6. Registre um rastro reproduzível</a></li></ol></nav></aside>
+<aside><nav aria-label="Índice del módulo" class="hidden lg:block sticky top-24" data-inema-toc=""><p class="text-sm text-neutral-400 mb-3" data-inema-section-counter="">Sección 1 de 6</p><ol class="space-y-1"><li><a class="toc-link block border-l-2 border-dark-600 px-3 py-2 text-sm text-neutral-400 hover:text-purple-400" href="#topico-1">1. Separa la propuesta de la ejecución</a></li>
+<li><a class="toc-link block border-l-2 border-dark-600 px-3 py-2 text-sm text-neutral-400 hover:text-purple-400" href="#topico-2">2. Valida el esquema de nuevo</a></li>
+<li><a class="toc-link block border-l-2 border-dark-600 px-3 py-2 text-sm text-neutral-400 hover:text-purple-400" href="#topico-3">3. Aplica la política antes del efecto</a></li>
+<li><a class="toc-link block border-l-2 border-dark-600 px-3 py-2 text-sm text-neutral-400 hover:text-purple-400" href="#topico-4">4. Ejecuta con presupuesto y cancelación</a></li>
+<li><a class="toc-link block border-l-2 border-dark-600 px-3 py-2 text-sm text-neutral-400 hover:text-purple-400" href="#topico-5">5. Normaliza resultados y fallas</a></li>
+<li><a class="toc-link block border-l-2 border-dark-600 px-3 py-2 text-sm text-neutral-400 hover:text-purple-400" href="#topico-6">6. Registra un rastro reproducible</a></li></ol></nav></aside>
 <article class="min-w-0">
 <section class="mb-16" data-inema-topic="modulo-3-2#topico-1" id="topico-1">
 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
 <div class="flex items-center gap-4 min-w-0">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl flex-shrink-0">1</span>
-<h2 class="text-2xl font-bold">Separe proposta de execução</h2>
+<h2 class="text-2xl font-bold">Separa la propuesta de la ejecución</h2>
 </div>
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 self-start" data-inema-doubt-toggle="" type="button">
 <span aria-hidden="true">?</span>
-<span>Tenho dúvida</span>
+<span>Tengo una duda</span>
 </button>
 </div>
 <div class="inema-prose">
-<p class="text-neutral-300 mb-5 leading-relaxed" data-inema-block="m3-2-t1-p1"><strong class="text-purple-400">O que é:</strong> A chamada produzida pelo modelo é uma proposta não confiável até passar por validação e política.</p>
-<p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m3-2-t1-p2"><strong class="text-purple-400">Por que aprender:</strong> A fronteira impede que texto probabilístico se transforme diretamente em efeito.</p>
+<p class="text-neutral-300 mb-5 leading-relaxed" data-inema-block="m3-2-t1-p1"><strong class="text-purple-400">Qué es:</strong> La llamada generada por el modelo es una propuesta no confiable hasta que pasa la validación y la política.</p>
+<p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m3-2-t1-p2"><strong class="text-purple-400">Por qué aprender:</strong> La frontera impide que el texto probabilístico se convierta directamente en un efecto.</p>
 </div>
 <div class="rounded-2xl border border-purple-500/30 bg-dark-900/40 p-4 mb-7 overflow-hidden">
-<svg aria-label="Fluxo de Chamada proposta para Policy + execução para Resultado observado" class="w-full h-auto" role="img" viewbox="0 0 1000 300">
+<svg aria-label="Flujo de Llamada propuesta para Policy + ejecución para Resultado observado" class="w-full h-auto" role="img" viewbox="0 0 1000 300">
 <defs>
 <filter height="180%" id="m32-glow" width="180%" x="-40%" y="-40%">
 <fegaussianblur result="b" stddeviation="1.8"></fegaussianblur>
@@ -150,69 +150,69 @@
 </g>
 <g>
 <rect fill="#1a1230" height="90" rx="14" stroke="#c084fc" stroke-width="2" width="230" x="40" y="105"></rect>
-<text fill="#c084fc" font-family="Inter,sans-serif" font-size="18" font-weight="600" text-anchor="middle" x="155" y="143">Chamada proposta</text>
-<text fill="#d1d5db" font-family="Inter,sans-serif" font-size="13" text-anchor="middle" x="155" y="170">estado de partida</text>
+<text fill="#c084fc" font-family="Inter,sans-serif" font-size="18" font-weight="600" text-anchor="middle" x="155" y="143">Llamada propuesta</text>
+<text fill="#d1d5db" font-family="Inter,sans-serif" font-size="13" text-anchor="middle" x="155" y="170">estado inicial</text>
 </g>
 <g filter="url(#m32-glow)">
 <rect fill="#1a1230" height="110" rx="14" stroke="#c084fc" stroke-width="2" width="240" x="380" y="95"></rect>
 </g>
-<text fill="#c084fc" font-family="Inter,sans-serif" font-size="18" font-weight="600" text-anchor="middle" x="500" y="143">Policy + execução</text>
-<text fill="#d1d5db" font-family="Inter,sans-serif" font-size="13" text-anchor="middle" x="500" y="170">decisão observável</text>
+<text fill="#c084fc" font-family="Inter,sans-serif" font-size="18" font-weight="600" text-anchor="middle" x="500" y="143">Policy + ejecución</text>
+<text fill="#d1d5db" font-family="Inter,sans-serif" font-size="13" text-anchor="middle" x="500" y="170">decisión observable</text>
 <g>
 <rect fill="#0e1b26" height="90" rx="14" stroke="#38bdf8" stroke-width="2" width="230" x="730" y="105"></rect>
 <text fill="#9ad6ff" font-family="Inter,sans-serif" font-size="18" font-weight="600" text-anchor="middle" x="845" y="143">Resultado observado</text>
-<text fill="#bfe6ff" font-family="Inter,sans-serif" font-size="13" text-anchor="middle" x="845" y="170">resultado verificável</text>
+<text fill="#bfe6ff" font-family="Inter,sans-serif" font-size="13" text-anchor="middle" x="845" y="170">resultado verificable</text>
 </g>
 </svg>
 </div>
 <div class="grid md:grid-cols-2 gap-6 mb-6">
 <div class="bg-purple-900/20 border border-purple-500/30 rounded-xl p-6">
 <h3 class="font-semibold text-purple-400">Antes de modelar</h3>
-<p class="text-neutral-300 mt-3">Escreva o pedido da pessoa, o estado atual e a evidência que provará conclusão.</p>
+<p class="text-neutral-300 mt-3">Escribe la solicitud de la persona, el estado actual y la evidencia que probará que se completó.</p>
 </div>
 <div class="bg-red-900/20 border border-red-500/30 rounded-xl p-6">
-<h3 class="font-semibold text-red-400">Erro de partida</h3>
-<p class="text-neutral-300 mt-3">Começar pelo nome de uma função ou por um botão produz uma tool sem objetivo humano claro.</p>
+<h3 class="font-semibold text-red-400">Error de inicio</h3>
+<p class="text-neutral-300 mt-3">Empezar por el nombre de una función o por un botón produce una herramienta sin un objetivo humano claro.</p>
 </div>
 </div>
 <div class="bg-primary/10 border border-primary/30 rounded-xl p-6 mb-6">
-<h3 class="font-semibold text-primary">Preveja antes de abrir o código</h3>
-<p class="text-neutral-300 mt-3">Qual informação muda a decisão? Qual efeito precisa aparecer na interface? Responda antes de implementar.</p>
+<h3 class="font-semibold text-primary">Anticípate antes de abrir el código</h3>
+<p class="text-neutral-300 mt-3">¿Qué información cambia la decisión? ¿Qué efecto debe aparecer en la interfaz? Responde antes de implementar.</p>
 </div>
 <pre class="code-shell mb-6"><code>const proposal = await model.chooseTool(context);
 const approved = await gate.evaluate(proposal, session);</code></pre>
 <details class="bg-dark-800 border border-dark-600 rounded-xl p-6 mb-6">
-<summary class="font-semibold text-sky-400 cursor-pointer">Indo mais fundo: evidência que vale guardar</summary>
+<summary class="font-semibold text-sky-400 cursor-pointer">Profundiza: evidencia que vale la pena guardar</summary>
 <div class="mt-4 space-y-3 text-sm text-neutral-300">
-<p data-inema-block="m3-2-t1-p3">Registre a entrada, o estado anterior, a decisão tomada, o resultado e a alteração visível da página.</p>
-<p data-inema-block="m3-2-t1-p4">Inclua também uma falha provocada e o comportamento observado sem suporte WebMCP.</p>
+<p data-inema-block="m3-2-t1-p3">Registra la entrada, el estado anterior, la decisión tomada, el resultado y el cambio visible en la página.</p>
+<p data-inema-block="m3-2-t1-p4">Incluye también un fallo provocado y el comportamiento observado sin soporte WebMCP.</p>
 </div>
 </details>
 <div>
-<h3 class="font-semibold text-purple-400">Conceitos-chave</h3>
+<h3 class="font-semibold text-purple-400">Conceptos clave</h3>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-5">
 <div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
 <strong class="text-purple-400 text-xs">01</strong>
-<p class="text-sm text-neutral-300 mt-2">tool call</p>
+<p class="text-sm text-neutral-300 mt-2">llamada a la herramienta</p>
 </div>
 <div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
 <strong class="text-purple-400 text-xs">02</strong>
-<p class="text-sm text-neutral-300 mt-2">untrusted input</p>
+<p class="text-sm text-neutral-300 mt-2">entrada no confiable</p>
 </div>
 <div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
 <strong class="text-purple-400 text-xs">03</strong>
-<p class="text-sm text-neutral-300 mt-2">policy gate</p>
+<p class="text-sm text-neutral-300 mt-2">control de políticas</p>
 </div>
 <div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
 <strong class="text-purple-400 text-xs">04</strong>
-<p class="text-sm text-neutral-300 mt-2">execução</p>
+<p class="text-sm text-neutral-300 mt-2">ejecución</p>
 </div>
 </div>
 </div>
 <div class="flex justify-start mt-7">
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30" data-inema-read-toggle="" type="button">
 <span aria-hidden="true" class="inema-read-icon">○</span>
-<span data-inema-read-label="">Marcar como lido</span>
+<span data-inema-read-label="">Marcar como leído</span>
 </button>
 </div>
 </section>
@@ -220,51 +220,51 @@ const approved = await gate.evaluate(proposal, session);</code></pre>
 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
 <div class="flex items-center gap-4 min-w-0">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl flex-shrink-0">2</span>
-<h2 class="text-2xl font-bold">Valide o schema novamente</h2>
+<h2 class="text-2xl font-bold">Valida el schema de nuevo</h2>
 </div>
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 self-start" data-inema-doubt-toggle="" type="button">
 <span aria-hidden="true">?</span>
-<span>Tenho dúvida</span>
+<span>Tengo una duda</span>
 </button>
 </div>
 <div class="inema-prose">
-<p class="text-neutral-300 mb-5 leading-relaxed" data-inema-block="m3-2-t2-p1"><strong class="text-purple-400">O que é:</strong> Mesmo quando o provedor aplica schemas, o runtime valida tipos, limites, enums e campos extras.</p>
-<p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m3-2-t2-p2"><strong class="text-purple-400">Por que aprender:</strong> Defesa em profundidade contém divergências de provider e chamadas produzidas por código externo.</p>
+<p class="text-neutral-300 mb-5 leading-relaxed" data-inema-block="m3-2-t2-p1"><strong class="text-purple-400">Qué es:</strong> Aunque el proveedor aplique esquemas, el runtime valida tipos, límites, enums y campos adicionales.</p>
+<p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m3-2-t2-p2"><strong class="text-purple-400">Por qué aprender:</strong> La defensa en profundidad contiene las divergencias entre providers y las llamadas generadas por código externo.</p>
 </div>
 <div class="overflow-x-auto border border-dark-600 rounded-xl mb-6">
 <table class="w-full text-left text-sm min-w-[700px]">
 <thead class="bg-dark-700">
-<tr><th class="p-4">Pergunta</th><th class="p-4">Contrato forte</th><th class="p-4">Contrato fraco</th></tr>
+<tr><th class="p-4">Pregunta</th><th class="p-4">Contrato sólido</th><th class="p-4">Contrato débil</th></tr>
 </thead>
 <tbody class="divide-y divide-dark-600">
-<tr><th class="p-4">Quando usar?</th><td class="p-4">A descrição nomeia intenção e contexto.</td><td class="p-4">“Faz coisas” ou “gerencia”.</td></tr>
-<tr><th class="p-4">O que recebe?</th><td class="p-4">Somente dados necessários.</td><td class="p-4">Objeto genérico e ilimitado.</td></tr>
-<tr><th class="p-4">O que devolve?</th><td class="p-4">Estado e próxima ação verificáveis.</td><td class="p-4">Texto sem protocolo.</td></tr>
-<tr><th class="p-4">Como falha?</th><td class="p-4">Código, motivo e recuperação.</td><td class="p-4">Exceção opaca.</td></tr>
+<tr><th class="p-4">¿Cuándo usarlo?</th><td class="p-4">La descripción nombra la intención y el contexto.</td><td class="p-4">“Hace cosas” o “administra”.</td></tr>
+<tr><th class="p-4">¿Qué recibe?</th><td class="p-4">Solo los datos necesarios.</td><td class="p-4">Objeto genérico e ilimitado.</td></tr>
+<tr><th class="p-4">¿Qué devuelve?</th><td class="p-4">Estado y próxima acción verificables.</td><td class="p-4">Texto sin protocolo.</td></tr>
+<tr><th class="p-4">¿Cómo falla?</th><td class="p-4">Código, motivo y recuperación.</td><td class="p-4">Excepción opaca.</td></tr>
 </tbody>
 </table>
 </div>
 <div class="grid md:grid-cols-2 gap-6 mb-6">
 <div class="bg-purple-900/20 border border-purple-500/30 rounded-xl p-6">
-<h3 class="font-semibold text-purple-400">Faça</h3>
-<ul class="mt-4 space-y-2 text-neutral-300"><li>✓ Use verbos específicos.</li><li>✓ Delimite entradas.</li><li>✓ Declare a evidência.</li></ul>
+<h3 class="font-semibold text-purple-400">Hazlo</h3>
+<ul class="mt-4 space-y-2 text-neutral-300"><li>✓ Usa verbos específicos.</li><li>✓ Delimita las entradas.</li><li>✓ Declara la evidencia.</li></ul>
 </div>
 <div class="bg-red-900/20 border border-red-500/30 rounded-xl p-6">
-<h3 class="font-semibold text-red-400">Evite</h3>
-<ul class="mt-4 space-y-2 text-neutral-300"><li>✗ Misturar intenções.</li><li>✗ Aceitar qualquer objeto.</li><li>✗ Esconder efeitos.</li></ul>
+<h3 class="font-semibold text-red-400">Evita</h3>
+<ul class="mt-4 space-y-2 text-neutral-300"><li>✗ Mezclar intenciones.</li><li>✗ Aceptar cualquier objeto.</li><li>✗ Ocultar efectos.</li></ul>
 </div>
 </div>
 <pre class="code-shell mb-6"><code>const result = validator.validate(tool.inputSchema, proposal.arguments);
 if (!result.ok) return fail("INVALID_ARGUMENTS", result.errors);</code></pre>
 <details class="bg-dark-800 border border-dark-600 rounded-xl p-6 mb-6">
-<summary class="font-semibold text-sky-400 cursor-pointer">Indo mais fundo: evidência que vale guardar</summary>
+<summary class="font-semibold text-sky-400 cursor-pointer">Profundiza: evidencia que vale la pena guardar</summary>
 <div class="mt-4 space-y-3 text-sm text-neutral-300">
-<p data-inema-block="m3-2-t2-p3">Registre a entrada, o estado anterior, a decisão tomada, o resultado e a alteração visível da página.</p>
-<p data-inema-block="m3-2-t2-p4">Inclua também uma falha provocada e o comportamento observado sem suporte WebMCP.</p>
+<p data-inema-block="m3-2-t2-p3">Registra la entrada, el estado anterior, la decisión tomada, el resultado y el cambio visible en la página.</p>
+<p data-inema-block="m3-2-t2-p4">Incluye también un fallo provocado y el comportamiento observado sin soporte WebMCP.</p>
 </div>
 </details>
 <div>
-<h3 class="font-semibold text-purple-400">Conceitos-chave</h3>
+<h3 class="font-semibold text-purple-400">Conceptos clave</h3>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-5">
 <div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
 <strong class="text-purple-400 text-xs">01</strong>
@@ -272,22 +272,22 @@ if (!result.ok) return fail("INVALID_ARGUMENTS", result.errors);</code></pre>
 </div>
 <div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
 <strong class="text-purple-400 text-xs">02</strong>
-<p class="text-sm text-neutral-300 mt-2">coerção proibida</p>
+<p class="text-sm text-neutral-300 mt-2">coerción prohibida</p>
 </div>
 <div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
 <strong class="text-purple-400 text-xs">03</strong>
-<p class="text-sm text-neutral-300 mt-2">limites</p>
+<p class="text-sm text-neutral-300 mt-2">límites</p>
 </div>
 <div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
 <strong class="text-purple-400 text-xs">04</strong>
-<p class="text-sm text-neutral-300 mt-2">erro estável</p>
+<p class="text-sm text-neutral-300 mt-2">error estable</p>
 </div>
 </div>
 </div>
 <div class="flex justify-start mt-7">
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30" data-inema-read-toggle="" type="button">
 <span aria-hidden="true" class="inema-read-icon">○</span>
-<span data-inema-read-label="">Marcar como lido</span>
+<span data-inema-read-label="">Marcar como leído</span>
 </button>
 </div>
 </section>
@@ -295,74 +295,74 @@ if (!result.ok) return fail("INVALID_ARGUMENTS", result.errors);</code></pre>
 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
 <div class="flex items-center gap-4 min-w-0">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl flex-shrink-0">3</span>
-<h2 class="text-2xl font-bold">Aplique política antes do efeito</h2>
+<h2 class="text-2xl font-bold">Aplica la política antes del efecto</h2>
 </div>
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 self-start" data-inema-doubt-toggle="" type="button">
 <span aria-hidden="true">?</span>
-<span>Tenho dúvida</span>
+<span>Tengo una duda</span>
 </button>
 </div>
 <div class="inema-prose">
-<p class="text-neutral-300 mb-5 leading-relaxed" data-inema-block="m3-2-t3-p1"><strong class="text-purple-400">O que é:</strong> Risco, autenticação, escopo e necessidade de confirmação são decididos fora do modelo.</p>
-<p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m3-2-t3-p2"><strong class="text-purple-400">Por que aprender:</strong> O LLM pode recomendar; a aplicação continua responsável por autorizar.</p>
+<p class="text-neutral-300 mb-5 leading-relaxed" data-inema-block="m3-2-t3-p1"><strong class="text-purple-400">Qué es:</strong> El riesgo, la autenticación, el alcance y la necesidad de confirmación se deciden fuera del modelo.</p>
+<p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m3-2-t3-p2"><strong class="text-purple-400">Por qué aprender:</strong> El LLM puede recomendar; la aplicación sigue siendo responsable de autorizar.</p>
 </div>
 <div class="space-y-4 mb-6">
 <div class="flex items-start gap-4">
 <div class="w-10 h-10 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold flex-shrink-0">1</div>
-<div class="flex-1 bg-dark-800 border border-dark-600 rounded-xl p-5"><h3 class="font-semibold">Observe</h3><p class="text-sm text-neutral-400 mt-2">Capture estado, entrada e contexto antes da ação.</p></div>
+<div class="flex-1 bg-dark-800 border border-dark-600 rounded-xl p-5"><h3 class="font-semibold">Observa</h3><p class="text-sm text-neutral-400 mt-2">Captura el estado, la entrada y el contexto antes de la acción.</p></div>
 </div>
 <div class="flex items-start gap-4">
 <div class="w-10 h-10 rounded-full bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold flex-shrink-0">2</div>
-<div class="flex-1 bg-dark-800 border border-dark-600 rounded-xl p-5"><h3 class="font-semibold">Decida</h3><p class="text-sm text-neutral-400 mt-2">Valide pré-condições e escolha a transição permitida.</p></div>
+<div class="flex-1 bg-dark-800 border border-dark-600 rounded-xl p-5"><h3 class="font-semibold">Decide</h3><p class="text-sm text-neutral-400 mt-2">Valida las precondiciones y elige la transición permitida.</p></div>
 </div>
 <div class="flex items-start gap-4">
 <div class="w-10 h-10 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold flex-shrink-0">3</div>
-<div class="flex-1 bg-dark-800 border border-dark-600 rounded-xl p-5"><h3 class="font-semibold">Execute</h3><p class="text-sm text-neutral-400 mt-2">Aplique a regra compartilhada e respeite cancelamento.</p></div>
+<div class="flex-1 bg-dark-800 border border-dark-600 rounded-xl p-5"><h3 class="font-semibold">Ejecuta</h3><p class="text-sm text-neutral-400 mt-2">Aplica la regla compartida y respeta la cancelación.</p></div>
 </div>
 <div class="flex items-start gap-4">
 <div class="w-10 h-10 rounded-full bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold flex-shrink-0">4</div>
-<div class="flex-1 bg-dark-800 border border-dark-600 rounded-xl p-5"><h3 class="font-semibold">Prove</h3><p class="text-sm text-neutral-400 mt-2">Atualize a interface e devolva resultado estruturado.</p></div>
+<div class="flex-1 bg-dark-800 border border-dark-600 rounded-xl p-5"><h3 class="font-semibold">Demuestra</h3><p class="text-sm text-neutral-400 mt-2">Actualiza la interfaz y devuelve un resultado estructurado.</p></div>
 </div>
 </div>
 <div class="bg-primary/10 border border-primary/30 rounded-xl p-6 mb-6">
-<h3 class="font-semibold text-primary">Ponto de controle</h3>
-<p class="text-neutral-300 mt-3">Se a etapa 2 reprovar, a tool não tenta “dar um jeito”: ela devolve uma recuperação explícita.</p>
+<h3 class="font-semibold text-primary">Punto de control</h3>
+<p class="text-neutral-300 mt-3">Si la etapa 2 falla, la tool no intenta «arreglarlo»: devuelve una recuperación explícita.</p>
 </div>
 <pre class="code-shell mb-6"><code>if (tool.annotations?.destructiveHint) {
   await requireHumanConfirmation(proposal);
 }</code></pre>
 <details class="bg-dark-800 border border-dark-600 rounded-xl p-6 mb-6">
-<summary class="font-semibold text-sky-400 cursor-pointer">Indo mais fundo: evidência que vale guardar</summary>
+<summary class="font-semibold text-sky-400 cursor-pointer">Profundiza: evidencia que vale la pena guardar</summary>
 <div class="mt-4 space-y-3 text-sm text-neutral-300">
-<p data-inema-block="m3-2-t3-p3">Registre a entrada, o estado anterior, a decisão tomada, o resultado e a alteração visível da página.</p>
-<p data-inema-block="m3-2-t3-p4">Inclua também uma falha provocada e o comportamento observado sem suporte WebMCP.</p>
+<p data-inema-block="m3-2-t3-p3">Registra la entrada, el estado anterior, la decisión tomada, el resultado y el cambio visible en la página.</p>
+<p data-inema-block="m3-2-t3-p4">Incluye también un fallo provocado y el comportamiento observado sin soporte WebMCP.</p>
 </div>
 </details>
 <div>
-<h3 class="font-semibold text-purple-400">Conceitos-chave</h3>
+<h3 class="font-semibold text-purple-400">Conceptos clave</h3>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-5">
 <div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
 <strong class="text-purple-400 text-xs">01</strong>
-<p class="text-sm text-neutral-300 mt-2">autorização</p>
+<p class="text-sm text-neutral-300 mt-2">autorización</p>
 </div>
 <div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
 <strong class="text-purple-400 text-xs">02</strong>
-<p class="text-sm text-neutral-300 mt-2">risco</p>
+<p class="text-sm text-neutral-300 mt-2">riesgo</p>
 </div>
 <div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
 <strong class="text-purple-400 text-xs">03</strong>
-<p class="text-sm text-neutral-300 mt-2">confirmação</p>
+<p class="text-sm text-neutral-300 mt-2">confirmación</p>
 </div>
 <div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
 <strong class="text-purple-400 text-xs">04</strong>
-<p class="text-sm text-neutral-300 mt-2">escopo</p>
+<p class="text-sm text-neutral-300 mt-2">alcance</p>
 </div>
 </div>
 </div>
 <div class="flex justify-start mt-7">
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30" data-inema-read-toggle="" type="button">
 <span aria-hidden="true" class="inema-read-icon">○</span>
-<span data-inema-read-label="">Marcar como lido</span>
+<span data-inema-read-label="">Marcar como leído</span>
 </button>
 </div>
 </section>
@@ -370,20 +370,20 @@ if (!result.ok) return fail("INVALID_ARGUMENTS", result.errors);</code></pre>
 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
 <div class="flex items-center gap-4 min-w-0">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl flex-shrink-0">4</span>
-<h2 class="text-2xl font-bold">Execute com orçamento e cancelamento</h2>
+<h2 class="text-2xl font-bold">Ejecuta con presupuesto y cancelación</h2>
 </div>
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 self-start" data-inema-doubt-toggle="" type="button">
 <span aria-hidden="true">?</span>
-<span>Tenho dúvida</span>
+<span>Tengo una duda</span>
 </button>
 </div>
 <div class="inema-prose">
-<p class="text-neutral-300 mb-5 leading-relaxed" data-inema-block="m3-2-t4-p1"><strong class="text-purple-400">O que é:</strong> Toda execução recebe AbortSignal, deadline e limites compatíveis com a experiência.</p>
-<p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m3-2-t4-p2"><strong class="text-purple-400">Por que aprender:</strong> Uma conversa abandonada não deve manter rede, UI ou backend trabalhando indefinidamente.</p>
+<p class="text-neutral-300 mb-5 leading-relaxed" data-inema-block="m3-2-t4-p1"><strong class="text-purple-400">Qué es:</strong> Cada ejecución recibe AbortSignal, deadline y límites compatibles con la experiencia.</p>
+<p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m3-2-t4-p2"><strong class="text-purple-400">Por qué aprender:</strong> Una conversación abandonada no debe mantener la red, la UI ni el backend trabajando indefinidamente.</p>
 </div>
 <div class="grid lg:grid-cols-[1.1fr_.9fr] gap-6 mb-6">
 <div class="min-w-0">
-<p class="text-xs text-purple-400 font-semibold mb-3">CÓDIGO DE REFERÊNCIA</p>
+<p class="text-xs text-purple-400 font-semibold mb-3">CÓDIGO DE REFERENCIA</p>
 <pre class="code-shell"><code>const signal = AbortSignal.any([turn.signal, AbortSignal.timeout(10_000)]);
 const tools = await document.modelContext.getTools();
 const tool = tools.find((item) =&gt; item.name === proposal.name);
@@ -391,24 +391,24 @@ if (!tool) throw new Error("Tool não está mais disponível");
 return document.modelContext.executeTool(tool, proposal.arguments, { signal });</code></pre>
 </div>
 <div class="space-y-3 min-w-0">
-<div class="bg-dark-800 border border-dark-600 rounded-xl p-5"><strong class="text-purple-400">Entrada</strong><p class="text-sm text-neutral-400 mt-2">É pequena, descrita e validável.</p></div>
-<div class="bg-dark-800 border border-dark-600 rounded-xl p-5"><strong class="text-sky-400">Execução</strong><p class="text-sm text-neutral-400 mt-2">Reutiliza a regra real da aplicação.</p></div>
-<div class="bg-dark-800 border border-dark-600 rounded-xl p-5"><strong class="text-purple-400">Saída</strong><p class="text-sm text-neutral-400 mt-2">Permite verificar efeito e continuar.</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-xl p-5"><strong class="text-purple-400">Entrada</strong><p class="text-sm text-neutral-400 mt-2">Es pequeña, descriptible y validable.</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-xl p-5"><strong class="text-sky-400">Ejecución</strong><p class="text-sm text-neutral-400 mt-2">Reutiliza la regla real de la aplicación.</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-xl p-5"><strong class="text-purple-400">Salida</strong><p class="text-sm text-neutral-400 mt-2">Permite verificar el efecto y continuar.</p></div>
 </div>
 </div>
 <div class="bg-primary/10 border border-primary/30 rounded-xl p-6 mb-6">
-<h3 class="font-semibold text-primary">Leia o código como contrato</h3>
-<p class="text-neutral-300 mt-3">Sublinhe onde a entrada é validada, onde o efeito acontece, onde o cancelamento chega e onde a UI é atualizada.</p>
+<h3 class="font-semibold text-primary">Lee el código como contrato</h3>
+<p class="text-neutral-300 mt-3">Subraya dónde se valida la entrada, dónde ocurre el efecto, dónde llega la cancelación y dónde se actualiza la UI.</p>
 </div>
 <details class="bg-dark-800 border border-dark-600 rounded-xl p-6 mb-6">
-<summary class="font-semibold text-sky-400 cursor-pointer">Indo mais fundo: evidência que vale guardar</summary>
+<summary class="font-semibold text-sky-400 cursor-pointer">Profundiza: evidencia que vale la pena guardar</summary>
 <div class="mt-4 space-y-3 text-sm text-neutral-300">
-<p data-inema-block="m3-2-t4-p3">Registre a entrada, o estado anterior, a decisão tomada, o resultado e a alteração visível da página.</p>
-<p data-inema-block="m3-2-t4-p4">Inclua também uma falha provocada e o comportamento observado sem suporte WebMCP.</p>
+<p data-inema-block="m3-2-t4-p3">Registra la entrada, el estado anterior, la decisión tomada, el resultado y el cambio visible en la página.</p>
+<p data-inema-block="m3-2-t4-p4">Incluye también un fallo provocado y el comportamiento observado sin soporte WebMCP.</p>
 </div>
 </details>
 <div>
-<h3 class="font-semibold text-purple-400">Conceitos-chave</h3>
+<h3 class="font-semibold text-purple-400">Conceptos clave</h3>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-5">
 <div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
 <strong class="text-purple-400 text-xs">01</strong>
@@ -420,7 +420,7 @@ return document.modelContext.executeTool(tool, proposal.arguments, { signal });<
 </div>
 <div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
 <strong class="text-purple-400 text-xs">03</strong>
-<p class="text-sm text-neutral-300 mt-2">resource budget</p>
+<p class="text-sm text-neutral-300 mt-2">presupuesto de recursos</p>
 </div>
 <div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
 <strong class="text-purple-400 text-xs">04</strong>
@@ -431,7 +431,7 @@ return document.modelContext.executeTool(tool, proposal.arguments, { signal });<
 <div class="flex justify-start mt-7">
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30" data-inema-read-toggle="" type="button">
 <span aria-hidden="true" class="inema-read-icon">○</span>
-<span data-inema-read-label="">Marcar como lido</span>
+<span data-inema-read-label="">Marcar como leído</span>
 </button>
 </div>
 </section>
@@ -439,48 +439,48 @@ return document.modelContext.executeTool(tool, proposal.arguments, { signal });<
 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
 <div class="flex items-center gap-4 min-w-0">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl flex-shrink-0">5</span>
-<h2 class="text-2xl font-bold">Normalize resultados e falhas</h2>
+<h2 class="text-2xl font-bold">Normaliza los resultados y los errores</h2>
 </div>
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 self-start" data-inema-doubt-toggle="" type="button">
 <span aria-hidden="true">?</span>
-<span>Tenho dúvida</span>
+<span>Tengo una duda</span>
 </button>
 </div>
 <div class="inema-prose">
-<p class="text-neutral-300 mb-5 leading-relaxed" data-inema-block="m3-2-t5-p1"><strong class="text-purple-400">O que é:</strong> O runtime converte retornos heterogêneos em envelopes com status, dados, evidência e próxima ação.</p>
-<p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m3-2-t5-p2"><strong class="text-purple-400">Por que aprender:</strong> Uma forma comum simplifica o loop sem esconder o erro original.</p>
+<p class="text-neutral-300 mb-5 leading-relaxed" data-inema-block="m3-2-t5-p1"><strong class="text-purple-400">Qué es:</strong> El runtime convierte retornos heterogéneos en sobres con estado, datos, evidencia y la siguiente acción.</p>
+<p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m3-2-t5-p2"><strong class="text-purple-400">Por qué aprender:</strong> Una forma común simplifica el loop sin ocultar el error original.</p>
 </div>
 <div class="grid md:grid-cols-2 gap-6 mb-6">
 <div class="bg-red-900/20 border border-red-500/30 rounded-xl p-6">
-<h3 class="font-semibold text-red-400">Falha provocada</h3>
-<p class="text-neutral-300 mt-3">Execute o cenário com estado ausente, entrada inválida ou capacidade indisponível.</p>
+<h3 class="font-semibold text-red-400">Fallo provocado</h3>
+<p class="text-neutral-300 mt-3">Ejecuta el escenario con estado ausente, entrada no válida o capacidad no disponible.</p>
 </div>
 <div class="bg-purple-900/20 border border-purple-500/30 rounded-xl p-6">
-<h3 class="font-semibold text-purple-400">Recuperação esperada</h3>
-<p class="text-neutral-300 mt-3">A resposta informa o que falhou, o que permanece seguro e qual ação pode continuar.</p>
+<h3 class="font-semibold text-purple-400">Recuperación esperada</h3>
+<p class="text-neutral-300 mt-3">La respuesta informa qué falló, qué sigue siendo seguro y qué acción puede continuar.</p>
 </div>
 </div>
 <div class="bg-dark-800 border border-dark-600 rounded-xl p-6 mb-6">
-<h3 class="font-semibold">Matriz mínima de teste</h3>
+<h3 class="font-semibold">Matriz mínima de prueba</h3>
 <div class="grid sm:grid-cols-2 gap-4 mt-4 text-sm text-neutral-300">
-<p>✓ caminho feliz reproduzível</p>
-<p>✓ entrada inválida acionável</p>
-<p>✓ cancelamento encerra trabalho</p>
-<p>✓ fallback preserva a jornada</p>
-<p>✓ interface reflete o estado</p>
-<p>✓ backend mantém autorização</p>
+<p>✓ camino feliz reproducible</p>
+<p>✓ entrada inválida accionable</p>
+<p>✓ la cancelación termina el trabajo</p>
+<p>✓ el fallback preserva el recorrido</p>
+<p>✓ la interfaz refleja el estado</p>
+<p>✓ el backend mantiene la autorización</p>
 </div>
 </div>
 <pre class="code-shell mb-6"><code>return { ok: false, code: "AUTH_REQUIRED", recovery: { action: "request_login" } };</code></pre>
 <details class="bg-dark-800 border border-dark-600 rounded-xl p-6 mb-6">
-<summary class="font-semibold text-sky-400 cursor-pointer">Indo mais fundo: evidência que vale guardar</summary>
+<summary class="font-semibold text-sky-400 cursor-pointer">Profundiza: evidencia que vale la pena guardar</summary>
 <div class="mt-4 space-y-3 text-sm text-neutral-300">
-<p data-inema-block="m3-2-t5-p3">Registre a entrada, o estado anterior, a decisão tomada, o resultado e a alteração visível da página.</p>
-<p data-inema-block="m3-2-t5-p4">Inclua também uma falha provocada e o comportamento observado sem suporte WebMCP.</p>
+<p data-inema-block="m3-2-t5-p3">Registra la entrada, el estado anterior, la decisión tomada, el resultado y el cambio visible en la página.</p>
+<p data-inema-block="m3-2-t5-p4">Incluye también un fallo provocado y el comportamiento observado sin soporte WebMCP.</p>
 </div>
 </details>
 <div>
-<h3 class="font-semibold text-purple-400">Conceitos-chave</h3>
+<h3 class="font-semibold text-purple-400">Conceptos clave</h3>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-5">
 <div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
 <strong class="text-purple-400 text-xs">01</strong>
@@ -488,22 +488,22 @@ return document.modelContext.executeTool(tool, proposal.arguments, { signal });<
 </div>
 <div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
 <strong class="text-purple-400 text-xs">02</strong>
-<p class="text-sm text-neutral-300 mt-2">erro recuperável</p>
+<p class="text-sm text-neutral-300 mt-2">error recuperable</p>
 </div>
 <div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
 <strong class="text-purple-400 text-xs">03</strong>
-<p class="text-sm text-neutral-300 mt-2">evidência</p>
+<p class="text-sm text-neutral-300 mt-2">evidencia</p>
 </div>
 <div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
 <strong class="text-purple-400 text-xs">04</strong>
-<p class="text-sm text-neutral-300 mt-2">next action</p>
+<p class="text-sm text-neutral-300 mt-2">siguiente acción</p>
 </div>
 </div>
 </div>
 <div class="flex justify-start mt-7">
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30" data-inema-read-toggle="" type="button">
 <span aria-hidden="true" class="inema-read-icon">○</span>
-<span data-inema-read-label="">Marcar como lido</span>
+<span data-inema-read-label="">Marcar como leído</span>
 </button>
 </div>
 </section>
@@ -511,45 +511,45 @@ return document.modelContext.executeTool(tool, proposal.arguments, { signal });<
 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
 <div class="flex items-center gap-4 min-w-0">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl flex-shrink-0">6</span>
-<h2 class="text-2xl font-bold">Registre um rastro reproduzível</h2>
+<h2 class="text-2xl font-bold">Registra un rastro reproducible</h2>
 </div>
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 self-start" data-inema-doubt-toggle="" type="button">
 <span aria-hidden="true">?</span>
-<span>Tenho dúvida</span>
+<span>Tengo una duda</span>
 </button>
 </div>
 <div class="inema-prose">
-<p class="text-neutral-300 mb-5 leading-relaxed" data-inema-block="m3-2-t6-p1"><strong class="text-purple-400">O que é:</strong> Cada execução liga turno, catálogo, proposta, decisão de política, duração e resultado sanitizado.</p>
-<p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m3-2-t6-p2"><strong class="text-purple-400">Por que aprender:</strong> O rastro permite depurar seleção, execução e efeito sem gravar segredos.</p>
+<p class="text-neutral-300 mb-5 leading-relaxed" data-inema-block="m3-2-t6-p1"><strong class="text-purple-400">Qué es:</strong> Cada ejecución vincula el turno, el catálogo, la propuesta, la decisión de política, la duración y el resultado sanitizado.</p>
+<p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m3-2-t6-p2"><strong class="text-purple-400">Por qué aprender:</strong> El rastro permite depurar la selección, la ejecución y el efecto sin guardar secretos.</p>
 </div>
 <div class="bg-dark-800 border border-dark-600 rounded-xl p-6 mb-6">
-<h3 class="text-xl font-bold">Exercício de síntese</h3>
+<h3 class="text-xl font-bold">Ejercicio de síntesis</h3>
 <ol class="mt-4 space-y-3 text-neutral-300">
-<li><strong class="text-purple-400">1.</strong> Explique o problema sem usar o nome da tecnologia.</li>
-<li><strong class="text-purple-400">2.</strong> Desenhe o estado anterior e posterior.</li>
-<li><strong class="text-purple-400">3.</strong> Implemente a menor prova funcional.</li>
-<li><strong class="text-purple-400">4.</strong> Provoque uma falha e registre a recuperação.</li>
-<li><strong class="text-purple-400">5.</strong> Entregue código, evidência e uma limitação conhecida.</li>
+<li><strong class="text-purple-400">1.</strong> Explica el problema sin usar el nombre de la tecnología.</li>
+<li><strong class="text-purple-400">2.</strong> Diseña el estado anterior y posterior.</li>
+<li><strong class="text-purple-400">3.</strong> Implementa la prueba funcional más pequeña.</li>
+<li><strong class="text-purple-400">4.</strong> Provoca un fallo y registra la recuperación.</li>
+<li><strong class="text-purple-400">5.</strong> Entrega código, evidencia y una limitación conocida.</li>
 </ol>
 </div>
 <div class="bg-purple-900/20 border border-purple-500/30 rounded-xl p-6 mb-6">
-<h3 class="text-xl font-bold text-purple-400">Desafio do módulo</h3>
-<p class="text-neutral-300 mt-3">Implementar um executor que recebe uma chamada do modelo, valida a intenção e devolve envelope de sucesso, erro ou recuperação.</p>
+<h3 class="text-xl font-bold text-purple-400">Desafío del módulo</h3>
+<p class="text-neutral-300 mt-3">Implementa un ejecutor que recibe una llamada del modelo, valida la intención y devuelve un sobre de éxito, error o recuperación.</p>
 </div>
 <div class="bg-primary/10 border border-primary/30 rounded-xl p-6 mb-6">
-<h3 class="font-semibold text-primary">Critério de Agent Developer responsável</h3>
-<p class="text-neutral-300 mt-3">A entrega precisa funcionar, explicar seus limites e preservar o caminho humano quando a capacidade experimental não existir.</p>
+<h3 class="font-semibold text-primary">Criterio de Agent Developer responsable</h3>
+<p class="text-neutral-300 mt-3">La entrega debe funcionar, explicar sus límites y preservar la vía humana cuando la capacidad experimental no exista.</p>
 </div>
 <pre class="code-shell mb-6"><code>trace.record({ turnId, tool: proposal.name, policy: approved.reason, durationMs, outcome });</code></pre>
 <details class="bg-dark-800 border border-dark-600 rounded-xl p-6 mb-6">
-<summary class="font-semibold text-sky-400 cursor-pointer">Indo mais fundo: evidência que vale guardar</summary>
+<summary class="font-semibold text-sky-400 cursor-pointer">Profundiza: evidencia que vale la pena guardar</summary>
 <div class="mt-4 space-y-3 text-sm text-neutral-300">
-<p data-inema-block="m3-2-t6-p3">Registre a entrada, o estado anterior, a decisão tomada, o resultado e a alteração visível da página.</p>
-<p data-inema-block="m3-2-t6-p4">Inclua também uma falha provocada e o comportamento observado sem suporte WebMCP.</p>
+<p data-inema-block="m3-2-t6-p3">Registra la entrada, el estado anterior, la decisión tomada, el resultado y el cambio visible en la página.</p>
+<p data-inema-block="m3-2-t6-p4">Incluye también un fallo provocado y el comportamiento observado sin soporte WebMCP.</p>
 </div>
 </details>
 <div>
-<h3 class="font-semibold text-purple-400">Conceitos-chave</h3>
+<h3 class="font-semibold text-purple-400">Conceptos clave</h3>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-5">
 <div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
 <strong class="text-purple-400 text-xs">01</strong>
@@ -561,23 +561,23 @@ return document.modelContext.executeTool(tool, proposal.arguments, { signal });<
 </div>
 <div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
 <strong class="text-purple-400 text-xs">03</strong>
-<p class="text-sm text-neutral-300 mt-2">latência</p>
+<p class="text-sm text-neutral-300 mt-2">latencia</p>
 </div>
 <div class="bg-dark-700/60 border border-dark-600 rounded-lg p-4">
 <strong class="text-purple-400 text-xs">04</strong>
-<p class="text-sm text-neutral-300 mt-2">redaction</p>
+<p class="text-sm text-neutral-300 mt-2">redacción</p>
 </div>
 </div>
 </div>
 <div class="flex justify-start mt-7">
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30" data-inema-read-toggle="" type="button">
 <span aria-hidden="true" class="inema-read-icon">○</span>
-<span data-inema-read-label="">Marcar como lido</span>
+<span data-inema-read-label="">Marcar como leído</span>
 </button>
 </div>
 </section>
-<section class="mb-12"><div class="bg-gradient-to-br from-purple-900/40 via-dark-800 to-dark-800 rounded-xl border border-purple-500/30 p-8"><h2 class="text-2xl font-bold mb-6">📦 Entrega do módulo</h2><p class="text-neutral-300 mb-6">Implementar um executor que recebe uma chamada do modelo, valida a intenção e devolve envelope de sucesso, erro ou recuperação.</p><div class="grid md:grid-cols-2 gap-6 mb-8"><div class="bg-purple-900/20 border border-purple-500/30 rounded-xl p-5"><h3 class="text-purple-400 font-semibold">Critério de aceite</h3><p class="text-neutral-300 text-sm mt-2">A entrega funciona com suporte WebMCP e mantém o caminho manual quando a API não existe.</p></div><div class="bg-sky-900/20 border border-sky-500/30 rounded-xl p-5"><h3 class="text-sky-400 font-semibold">Evidência</h3><p class="text-neutral-300 text-sm mt-2">Inclua código, cenário testado, resultado observado e uma limitação conhecida.</p></div></div><div class="flex justify-start flex-wrap gap-3"><a class="px-5 py-3 rounded-lg bg-dark-700 hover:bg-dark-600" href="../../index.html">← Voltar para a trilha</a><a class="px-5 py-3 rounded-lg bg-purple-600 hover:bg-purple-500 text-white" href="modulo-3-3.html">Próximo módulo: 1.3 →</a></div></div></section>
-<section class="border border-dark-600 rounded-xl p-6"><h2 class="text-xl font-bold">Fontes técnicas</h2><ul class="mt-4 space-y-2 text-sm"><li><a class="text-sky-400 hover:text-sky-300" href="https://github.com/webmachinelearning/webmcp" rel="noreferrer" target="_blank">Draft e repositório oficial WebMCP</a></li><li><a class="text-sky-400 hover:text-sky-300" href="https://webmachinelearning.github.io/webmcp/" rel="noreferrer" target="_blank">Especificação renderizada</a></li><li class="text-neutral-400">Snapshot oficial: 26/08/2026 · commit 41d12f0. A API declarativa permanece experimental; valide o draft antes de produção.</li></ul></section>
+<section class="mb-12"><div class="bg-gradient-to-br from-purple-900/40 via-dark-800 to-dark-800 rounded-xl border border-purple-500/30 p-8"><h2 class="text-2xl font-bold mb-6">📦 Entrega del módulo</h2><p class="text-neutral-300 mb-6">Implementa un ejecutor que recibe una llamada del modelo, valida la intención y devuelve un sobre de éxito, error o recuperación.</p><div class="grid md:grid-cols-2 gap-6 mb-8"><div class="bg-purple-900/20 border border-purple-500/30 rounded-xl p-5"><h3 class="text-purple-400 font-semibold">Criterio de aceptación</h3><p class="text-neutral-300 text-sm mt-2">La entrega funciona con soporte de WebMCP y mantiene la vía manual cuando la API no existe.</p></div><div class="bg-sky-900/20 border border-sky-500/30 rounded-xl p-5"><h3 class="text-sky-400 font-semibold">Evidencia</h3><p class="text-neutral-300 text-sm mt-2">Incluye código, escenario probado, resultado observado y una limitación conocida.</p></div></div><div class="flex justify-start flex-wrap gap-3"><a class="px-5 py-3 rounded-lg bg-dark-700 hover:bg-dark-600" href="../../index.html">← Volver a la ruta</a><a class="px-5 py-3 rounded-lg bg-purple-600 hover:bg-purple-500 text-white" href="modulo-3-3.html">Siguiente módulo: 1.3 →</a></div></div></section>
+<section class="border border-dark-600 rounded-xl p-6"><h2 class="text-xl font-bold">Fuentes técnicas</h2><ul class="mt-4 space-y-2 text-sm"><li><a class="text-sky-400 hover:text-sky-300" href="https://github.com/webmachinelearning/webmcp" rel="noreferrer" target="_blank">Draft y repositorio oficial WebMCP</a></li><li><a class="text-sky-400 hover:text-sky-300" href="https://webmachinelearning.github.io/webmcp/" rel="noreferrer" target="_blank">Especificación renderizada</a></li><li class="text-neutral-400">Snapshot oficial: 26/08/2026 · commit 41d12f0. La API declarativa sigue siendo experimental; valida el draft antes de producción.</li></ul></section>
 </article>
 </div>
 </main>
@@ -589,6 +589,6 @@ function closeModal(){document.querySelectorAll('.modal').forEach(m=>m.classList
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
 const tt=document.getElementById('theme-toggle'),di=document.getElementById('theme-toggle-dark-icon'),li=document.getElementById('theme-toggle-light-icon');function syncTheme(){if(document.documentElement.classList.contains('dark')){li?.classList.remove('hidden');di?.classList.add('hidden')}else{di?.classList.remove('hidden');li?.classList.add('hidden')}}syncTheme();tt?.addEventListener('click',()=>{const next=document.documentElement.classList.contains('dark')?'claro':'inema-dark';if(window.INEMA&&typeof window.INEMA.setPref==='function')window.INEMA.setPref('theme',next);else{document.documentElement.classList.toggle('dark');localStorage.setItem('theme',next==='claro'?'light':'dark')}syncTheme()});
 </script>
-<script src="../../assets/learn.js"></script>
+<script src="../../../assets/learn.js"></script>
 <script>if(window.INEMA&&typeof window.INEMA.init==='function')window.INEMA.init();</script>
 </body></html>

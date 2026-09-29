@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="pt-BR">
+<html class="dark" lang="es">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Scanner avançado local para auditar catálogos WebMCP, JSON Schema, ciclo de vida, risco e respostas." name="description"/>
+<meta content="Scanner avanzado local para auditar catálogos WebMCP, JSON Schema, ciclo de vida, riesgo y respuestas." name="description"/>
 <meta content="webmcp-zero-expert" name="inema-course"/>
 <script>
     (function(){try{var h=document.documentElement,p=JSON.parse(localStorage.getItem('inema.prefs')||'{}'),t=p.theme||(localStorage.getItem('theme')==='light'?'claro':'inema-dark');if(t==='claro'||t==='sepia')h.classList.remove('dark');else h.classList.add('dark');if(['sepia','foco','contraste'].includes(t))h.setAttribute('data-theme',t);else h.removeAttribute('data-theme');if(p.fontScale)h.style.fontSize=p.fontScale+'%';}catch(e){document.documentElement.classList.add('dark')}})();
   </script>
-<title>Validador avançado de tools e schemas | WebMCP Agent Developer</title>
+<title>Validador avanzado de tools y schemas | WebMCP Agent Developer</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>tailwind.config={darkMode:'class',theme:{extend:{colors:{primary:'#FACC15',dark:{900:'#111827',800:'#1f2937',700:'#374151',600:'#4b5563'}}}}};</script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="../favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../../favicon.svg" rel="icon" type="image/svg+xml"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="../assets/site.css" rel="stylesheet"/>
-<link href="../assets/learn.css" rel="stylesheet"/>
+<link href="../../assets/site.css" rel="stylesheet"/>
+<link href="../../assets/learn.css" rel="stylesheet"/>
 <script data-inema-manifest="" type="application/json">
 {
   "course": "webmcp-zero-expert",
@@ -56,13 +56,13 @@
 }
 </script>
 <link href="https://inematds.github.io/webmcp-4-agent-developer/labs/validador-tools.html" hreflang="pt-BR" rel="alternate"/><link href="https://inematds.github.io/webmcp-4-agent-developer/en/labs/validador-tools.html" hreflang="en" rel="alternate"/><link href="https://inematds.github.io/webmcp-4-agent-developer/es/labs/validador-tools.html" hreflang="es" rel="alternate"/></head>
-<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="validador-tools.html" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">PT</a><a href="../en/labs/validador-tools.html" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">EN</a><a href="../es/labs/validador-tools.html" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">ES</a></div>
-<a class="skip" href="#conteudo">Ir para o conteúdo</a>
-<nav aria-label="Navegação principal" class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="../../labs/validador-tools.html" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">PT</a><a href="../../en/labs/validador-tools.html" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">EN</a><a href="validador-tools.html" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">ES</a></div>
+<a class="skip" href="#conteudo">Ir al contenido</a>
+<nav aria-label="Navegación principal" class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex justify-between items-center min-h-16 gap-3">
 <div class="flex items-center gap-3 min-w-0">
-<a aria-label="WebMCP Agent Developer — início" class="flex items-center gap-2 text-yellow-400 hover:text-yellow-300 flex-shrink-0" href="../index.html">
+<a aria-label="WebMCP Agent Developer — inicio" class="flex items-center gap-2 text-yellow-400 hover:text-yellow-300 flex-shrink-0" href="../index.html">
 <span aria-hidden="true" class="text-2xl">⬡</span><span class="font-bold hidden sm:inline">WebMCP Agent Developer</span><span class="font-bold sm:hidden">W4</span>
 </a>
 <span class="text-neutral-600 hidden sm:inline">|</span>
@@ -71,28 +71,28 @@
 <div class="flex items-center gap-1">
 <div class="hidden lg:flex items-center gap-1">
 <a aria-current="page" class="phase-chip px-2.5 py-1.5 rounded-lg text-sm font-semibold" href="../index.html#capitulo-1">Cap. 1<span class="hidden xl:inline"> · Núcleo</span></a>
-<a class="phase-chip px-2.5 py-1.5 rounded-lg text-sm text-neutral-400 hover:text-purple-400" href="../index.html#capitulo-2">Cap. 2<span class="hidden xl:inline"> · Raciocínio</span></a>
+<a class="phase-chip px-2.5 py-1.5 rounded-lg text-sm text-neutral-400 hover:text-purple-400" href="../index.html#capitulo-2">Cap. 2<span class="hidden xl:inline"> · Razonamiento</span></a>
 <a class="phase-chip px-2.5 py-1.5 rounded-lg text-sm text-neutral-400 hover:text-purple-400" href="../index.html#capitulo-3">Cap. 3<span class="hidden xl:inline"> · Adaptadores</span></a>
 <a class="phase-chip px-2.5 py-1.5 rounded-lg text-sm text-neutral-400 hover:text-purple-400" href="../index.html#capitulo-4">Cap. 4<span class="hidden xl:inline"> · Entrega</span></a>
-<a class="phase-chip px-2.5 py-1.5 rounded-lg text-sm text-sky-400 hover:text-sky-300" href="../labs/validador-tools.html">Laboratórios</a>
+<a class="phase-chip px-2.5 py-1.5 rounded-lg text-sm text-sky-400 hover:text-sky-300" href="../labs/validador-tools.html">Laboratorios</a>
 </div>
-<button aria-label="Abrir minha jornada" class="p-2 rounded-lg text-neutral-300 hover:bg-dark-700" data-inema-journey-open="" type="button"><span aria-hidden="true">◷</span><span class="inema-journey-badge" data-count="0" data-inema-journey-badge=""></span></button>
+<button aria-label="Abrir mi recorrido" class="p-2 rounded-lg text-neutral-300 hover:bg-dark-700" data-inema-journey-open="" type="button"><span aria-hidden="true">◷</span><span class="inema-journey-badge" data-count="0" data-inema-journey-badge=""></span></button>
 <div class="relative">
-<button aria-expanded="false" aria-label="Ajustar aparência" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600" data-inema-appearance-toggle="[data-inema-appearance]" type="button">◑</button>
+<button aria-expanded="false" aria-label="Ajustar apariencia" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600" data-inema-appearance-toggle="[data-inema-appearance]" type="button">◑</button>
 <div class="inema-appearance-pop right-0 mt-3" data-inema-appearance="">
 <p class="text-sm font-semibold mb-2">Tema</p>
-<div class="inema-segment"><button data-inema-set-theme="inema-dark">Escuro</button><button data-inema-set-theme="claro">Claro</button><button data-inema-set-theme="sepia">Sépia</button><button data-inema-set-theme="foco">Foco</button><button data-inema-set-theme="contraste">Contraste</button></div>
-<p class="text-sm font-semibold mt-4 mb-2">Tamanho</p>
+<div class="inema-segment"><button data-inema-set-theme="inema-dark">Oscuro</button><button data-inema-set-theme="claro">Claro</button><button data-inema-set-theme="sepia">Sepia</button><button data-inema-set-theme="foco">Enfoque</button><button data-inema-set-theme="contraste">Contraste</button></div>
+<p class="text-sm font-semibold mt-4 mb-2">Tamaño</p>
 <div class="inema-segment"><button data-inema-set-fontscale="100">A</button><button data-inema-set-fontscale="112">A+</button><button data-inema-set-fontscale="125">A++</button></div>
 </div>
 </div>
-<button aria-label="Alternar tema claro e escuro" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600" id="theme-toggle">
+<button aria-label="Alternar tema claro y oscuro" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600" id="theme-toggle">
 <svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
 <svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
 </button>
 </div>
 </div>
-<div aria-label="Capítulos do WebMCP Agent Developer" class="lg:hidden flex items-center gap-1 overflow-x-auto pb-2">
+<div aria-label="Capítulos de WebMCP Agent Developer" class="lg:hidden flex items-center gap-1 overflow-x-auto pb-2">
 <a aria-current="page" class="phase-chip flex-shrink-0 px-3 py-2 rounded-lg text-xs font-semibold" href="../index.html#capitulo-1">Cap. 1</a>
 <a class="phase-chip flex-shrink-0 px-3 py-2 rounded-lg text-xs text-neutral-400 hover:text-purple-400" href="../index.html#capitulo-2">Cap. 2</a>
 <a class="phase-chip flex-shrink-0 px-3 py-2 rounded-lg text-xs text-neutral-400 hover:text-purple-400" href="../index.html#capitulo-3">Cap. 3</a>
@@ -106,15 +106,15 @@
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid lg:grid-cols-[1fr_.9fr] gap-12 items-center">
 <div>
 <span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">CONSOLE AVANÇADO · AGENT DEVELOPER</span>
-<h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">Inspecione o contexto antes de chamar o modelo</h1>
-<p class="text-lg text-neutral-300 mt-5 leading-relaxed">Cole um catálogo em JSON. O console verifica se descritores, schemas, risco e evidências são adequados ao pipeline de descoberta e execução.</p>
+<h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">Inspecciona el contexto antes de llamar al modelo</h1>
+<p class="text-lg text-neutral-300 mt-5 leading-relaxed">Pega un catálogo en JSON. El console verifica si los descriptores, los schemas, el riesgo y las evidencias son adecuados para el pipeline de descubrimiento y ejecución.</p>
 <div class="flex justify-start flex-wrap gap-3 mt-7">
-<button class="px-5 py-3 rounded-lg bg-purple-600 hover:bg-purple-500 text-white font-semibold" id="load-example" type="button">Carregar exemplo</button>
-<a class="px-5 py-3 rounded-lg border border-dark-600 hover:bg-dark-700" href="../curso/agent/modulo-3-4.html">Revisar o loop conversacional</a>
+<button class="px-5 py-3 rounded-lg bg-purple-600 hover:bg-purple-500 text-white font-semibold" id="load-example" type="button">Cargar ejemplo</button>
+<a class="px-5 py-3 rounded-lg border border-dark-600 hover:bg-dark-700" href="../curso/agent/modulo-3-4.html">Revisa el loop conversacional</a>
 </div>
 </div>
 <div class="rounded-2xl border border-purple-500/30 bg-dark-900/40 p-4 overflow-hidden">
-<svg aria-label="Fluxo JSON auditável para 24 verificações para Plano de correção" class="w-full h-auto" role="img" viewbox="0 0 900 260">
+<svg aria-label="Flujo JSON auditable para 24 verificaciones para Plan de corrección" class="w-full h-auto" role="img" viewbox="0 0 900 260">
 <defs>
 <lineargradient id="validator-hero-grad" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#c084fc"></stop><stop offset="1" stop-color="#3b82f6"></stop></lineargradient>
 <filter height="180%" id="validator-hero-glow" width="180%" x="-40%" y="-40%"><fegaussianblur result="b" stddeviation="1.8"></fegaussianblur><femerge><femergenode in="b"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter>
@@ -123,32 +123,32 @@
 </defs>
 <rect fill="url(#validator-hero-grid)" height="260" width="900"></rect>
 <path d="M250 130 H365 M535 130 H650" marker-end="url(#validator-hero-arrow)" opacity=".65" stroke="#38bdf8" stroke-width="1.8"></path>
-<g><rect fill="#1a1230" height="76" rx="14" stroke="#c084fc" stroke-width="2" width="205" x="45" y="92"></rect><text fill="#c084fc" font-family="Inter,sans-serif" font-size="17" font-weight="600" text-anchor="middle" x="147" y="125">JSON auditável</text><text fill="#bfdbfe" font-family="Inter,sans-serif" font-size="12" text-anchor="middle" x="147" y="148">entrada observável</text></g>
-<g filter="url(#validator-hero-glow)"><rect fill="url(#validator-hero-grad)" height="96" rx="14" stroke="#c084fc" stroke-width="2" width="170" x="365" y="82"></rect></g><text fill="#06281d" font-family="Inter,sans-serif" font-size="17" font-weight="600" text-anchor="middle" x="450" y="125">24 verificações</text><text fill="#064e3b" font-family="Inter,sans-serif" font-size="12" text-anchor="middle" x="450" y="149">contrato explícito</text>
-<g><rect fill="#0e1b26" height="76" rx="14" stroke="#38bdf8" stroke-width="2" width="205" x="650" y="92"></rect><text fill="#9ad6ff" font-family="Inter,sans-serif" font-size="17" font-weight="600" text-anchor="middle" x="752" y="125">Plano de correção</text><text fill="#bfe6ff" font-family="Inter,sans-serif" font-size="12" text-anchor="middle" x="752" y="148">resultado verificável</text></g>
+<g><rect fill="#1a1230" height="76" rx="14" stroke="#c084fc" stroke-width="2" width="205" x="45" y="92"></rect><text fill="#c084fc" font-family="Inter,sans-serif" font-size="17" font-weight="600" text-anchor="middle" x="147" y="125">JSON auditable</text><text fill="#bfdbfe" font-family="Inter,sans-serif" font-size="12" text-anchor="middle" x="147" y="148">entrada observable</text></g>
+<g filter="url(#validator-hero-glow)"><rect fill="url(#validator-hero-grad)" height="96" rx="14" stroke="#c084fc" stroke-width="2" width="170" x="365" y="82"></rect></g><text fill="#06281d" font-family="Inter,sans-serif" font-size="17" font-weight="600" text-anchor="middle" x="450" y="125">24 verificaciones</text><text fill="#064e3b" font-family="Inter,sans-serif" font-size="12" text-anchor="middle" x="450" y="149">contrato explícito</text>
+<g><rect fill="#0e1b26" height="76" rx="14" stroke="#38bdf8" stroke-width="2" width="205" x="650" y="92"></rect><text fill="#9ad6ff" font-family="Inter,sans-serif" font-size="17" font-weight="600" text-anchor="middle" x="752" y="125">Plan de corrección</text><text fill="#bfe6ff" font-family="Inter,sans-serif" font-size="12" text-anchor="middle" x="752" y="148">resultado verificable</text></g>
 </svg>
 </div>
 </div>
 </header>
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 <div class="grid md:grid-cols-3 gap-4 mb-10">
-<div class="bg-dark-800 border border-dark-600 rounded-xl p-5"><span class="text-purple-400 text-sm font-semibold">01 · Contrato</span><p class="text-neutral-400 text-sm mt-2">Nome, título, descrição e unicidade.</p></div>
-<div class="bg-dark-800 border border-dark-600 rounded-xl p-5"><span class="text-sky-400 text-sm font-semibold">02 · Schema</span><p class="text-neutral-400 text-sm mt-2">Tipos, propriedades, required e limites.</p></div>
-<div class="bg-dark-800 border border-dark-600 rounded-xl p-5"><span class="text-primary text-sm font-semibold">03 · Operação</span><p class="text-neutral-400 text-sm mt-2">Cancelamento, risco, confirmação e saída.</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-xl p-5"><span class="text-purple-400 text-sm font-semibold">01 · Contrato</span><p class="text-neutral-400 text-sm mt-2">Nombre, título, descripción y unicidad.</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-xl p-5"><span class="text-sky-400 text-sm font-semibold">02 · Esquema</span><p class="text-neutral-400 text-sm mt-2">Tipos, propiedades, required y límites.</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-xl p-5"><span class="text-primary text-sm font-semibold">03 · Operación</span><p class="text-neutral-400 text-sm mt-2">Cancelación, riesgo, confirmación y salida.</p></div>
 </div>
 <div class="grid xl:grid-cols-[1fr_1fr] gap-8 items-start">
 <section class="bg-dark-800 border border-dark-600 rounded-xl overflow-hidden">
 <div class="p-5 border-b border-dark-600">
-<div class="flex items-center justify-between gap-4"><div><p class="text-xs text-purple-400 font-semibold">ENTRADA LOCAL</p><h2 class="text-2xl font-bold mt-1">Catálogo em JSON</h2></div><span class="text-xs text-neutral-400" id="parse-status" role="status">Aguardando análise</span></div>
-<p class="text-sm text-neutral-400 mt-3">Use um array de descritores. Como funções não existem em JSON, declare <code class="text-sky-400">executeBehavior</code> e evidências operacionais separadamente.</p>
+<div class="flex items-center justify-between gap-4"><div><p class="text-xs text-purple-400 font-semibold">ENTRADA LOCAL</p><h2 class="text-2xl font-bold mt-1">Catálogo en JSON</h2></div><span class="text-xs text-neutral-400" id="parse-status" role="status">Esperando análisis</span></div>
+<p class="text-sm text-neutral-400 mt-3">Usa un array de descriptores. Como las funciones no existen en JSON, declara <code class="text-sky-400">executeBehavior</code> y evidencias operativas por separado.</p>
 </div>
 <div class="p-5">
-<label class="font-semibold" for="catalog-input">Descritores de tools</label>
+<label class="font-semibold" for="catalog-input">Descriptores de tools</label>
 <textarea aria-describedby="input-help" class="validator-textarea code-shell w-full mt-3" id="catalog-input" spellcheck="false"></textarea>
-<p class="text-xs text-neutral-500 mt-3" id="input-help">Nada é enviado para servidor, registrado em document.modelContext ou executado.</p>
+<p class="text-xs text-neutral-500 mt-3" id="input-help">No se envía nada al servidor, se registra en document.modelContext ni se ejecuta.</p>
 <div class="flex justify-start flex-wrap gap-3 mt-5">
-<button class="px-5 py-3 rounded-lg bg-purple-600 hover:bg-purple-500 text-white font-semibold" id="run-validator" type="button">Analisar catálogo</button>
-<button class="px-5 py-3 rounded-lg bg-dark-700 hover:bg-dark-600" id="clear-validator" type="button">Limpar</button>
+<button class="px-5 py-3 rounded-lg bg-purple-600 hover:bg-purple-500 text-white font-semibold" id="run-validator" type="button">Analizar catálogo</button>
+<button class="px-5 py-3 rounded-lg bg-dark-700 hover:bg-dark-600" id="clear-validator" type="button">Limpiar</button>
 </div>
 </div>
 </section>
@@ -156,21 +156,21 @@
 <div class="bg-dark-800 border border-dark-600 rounded-xl p-6 mb-6">
 <div class="flex flex-col sm:flex-row sm:items-center gap-6">
 <div class="relative w-28 h-28 rounded-full score-gauge flex-shrink-0" id="score-gauge" style="--score:0;--gauge-color:#c084fc"><div class="absolute inset-0 z-10 flex flex-col items-center justify-center"><strong class="text-3xl" id="score-value">0</strong><span class="text-xs text-neutral-400">de 100</span></div></div>
-<div><p class="text-purple-400 text-sm font-semibold" id="score-label">Sem diagnóstico</p><h2 class="text-2xl font-bold mt-1">Qualidade do catálogo</h2><p class="text-neutral-400 mt-2" id="score-summary">Carregue o exemplo ou cole seu JSON para começar.</p></div>
+<div><p class="text-purple-400 text-sm font-semibold" id="score-label">Sin diagnóstico</p><h2 class="text-2xl font-bold mt-1">Calidad del catálogo</h2><p class="text-neutral-400 mt-2" id="score-summary">Carga el ejemplo o pega tu JSON para comenzar.</p></div>
 </div>
-<div class="grid grid-cols-3 gap-3 mt-6"><div class="bg-dark-700 rounded-lg p-3"><strong class="text-purple-400 text-xl" id="count-pass">0</strong><p class="text-xs text-neutral-400">Passou</p></div><div class="bg-dark-700 rounded-lg p-3"><strong class="text-primary text-xl" id="count-warn">0</strong><p class="text-xs text-neutral-400">Atenções</p></div><div class="bg-dark-700 rounded-lg p-3"><strong class="text-red-400 text-xl" id="count-fail">0</strong><p class="text-xs text-neutral-400">Falhas</p></div></div>
+<div class="grid grid-cols-3 gap-3 mt-6"><div class="bg-dark-700 rounded-lg p-3"><strong class="text-purple-400 text-xl" id="count-pass">0</strong><p class="text-xs text-neutral-400">Pasó</p></div><div class="bg-dark-700 rounded-lg p-3"><strong class="text-primary text-xl" id="count-warn">0</strong><p class="text-xs text-neutral-400">Consideraciones</p></div><div class="bg-dark-700 rounded-lg p-3"><strong class="text-red-400 text-xl" id="count-fail">0</strong><p class="text-xs text-neutral-400">Fallos</p></div></div>
 </div>
 <div class="space-y-4 mb-6" id="tool-summary"></div>
-<div class="space-y-3" id="findings"><div class="bg-dark-800 border border-dark-600 rounded-xl p-6 text-neutral-400">Os achados aparecerão aqui, priorizados por impacto.</div></div>
+<div class="space-y-3" id="findings"><div class="bg-dark-800 border border-dark-600 rounded-xl p-6 text-neutral-400">Los hallazgos aparecerán aquí, priorizados por impacto.</div></div>
 </section>
 </div>
 <section class="mt-12 grid lg:grid-cols-2 gap-8">
-<div class="bg-primary/10 border border-primary/30 rounded-xl p-6"><h2 class="text-xl font-bold text-primary">O que este scanner não prova</h2><ul class="text-neutral-300 mt-4 space-y-2"><li>• suporte nativo do navegador;</li><li>• autorização do backend;</li><li>• segurança do código execute;</li><li>• qualidade real sem testes de execução.</li></ul></div>
-<div class="bg-dark-800 border border-purple-500/30 rounded-xl p-6"><h2 class="text-xl font-bold text-purple-400">Próximos laboratórios da formação</h2><ul class="text-neutral-300 mt-4 space-y-2"><li>• seletor de tools com dataset;</li><li>• executor com policy gate;</li><li>• avaliação de conversas completas.</li></ul></div>
+<div class="bg-primary/10 border border-primary/30 rounded-xl p-6"><h2 class="text-xl font-bold text-primary">Qué no demuestra este escáner</h2><ul class="text-neutral-300 mt-4 space-y-2"><li>• soporte nativo del navegador;</li><li>• autorización del backend;</li><li>• seguridad del código execute;</li><li>• calidad real sin pruebas de ejecución.</li></ul></div>
+<div class="bg-dark-800 border border-purple-500/30 rounded-xl p-6"><h2 class="text-xl font-bold text-purple-400">Próximos laboratorios de la formación</h2><ul class="text-neutral-300 mt-4 space-y-2"><li>• selector de tools con dataset;</li><li>• ejecutor con policy gate;</li><li>• evaluación de conversaciones completas.</li></ul></div>
 </section>
 </section>
 </main>
-<footer class="border-t border-dark-600 py-8"><div class="max-w-7xl mx-auto px-4 text-sm text-neutral-500">Validador local · não executa tools · Formação WebMCP Agent Developer</div></footer>
+<footer class="border-t border-dark-600 py-8"><div class="max-w-7xl mx-auto px-4 text-sm text-neutral-500">Validador local · no ejecuta tools · Formación WebMCP Agent Developer</div></footer>
 <script>
 function toggleTopic(button){const item=button.closest('.topic-item');const panel=item.querySelector('.topic-explanation');const card=button.closest('[data-inema-module]');card.querySelectorAll('.topic-explanation.active').forEach(x=>{if(x!==panel){x.classList.remove('active');const b=x.previousElementSibling;if(b)b.setAttribute('aria-expanded','false')}});panel.classList.toggle('active');button.setAttribute('aria-expanded',panel.classList.contains('active')?'true':'false')}
 function openModal(id){const m=document.getElementById(id);if(m){m.classList.remove('hidden');document.body.style.overflow='hidden';m.querySelector('button')?.focus()}}
@@ -178,7 +178,7 @@ function closeModal(){document.querySelectorAll('.modal').forEach(m=>m.classList
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
 const tt=document.getElementById('theme-toggle'),di=document.getElementById('theme-toggle-dark-icon'),li=document.getElementById('theme-toggle-light-icon');function syncTheme(){if(document.documentElement.classList.contains('dark')){li?.classList.remove('hidden');di?.classList.add('hidden')}else{di?.classList.remove('hidden');li?.classList.add('hidden')}}syncTheme();tt?.addEventListener('click',()=>{const next=document.documentElement.classList.contains('dark')?'claro':'inema-dark';if(window.INEMA&&typeof window.INEMA.setPref==='function')window.INEMA.setPref('theme',next);else{document.documentElement.classList.toggle('dark');localStorage.setItem('theme',next==='claro'?'light':'dark')}syncTheme()});
 </script>
-<script src="../assets/learn.js"></script>
+<script src="../../assets/learn.js"></script>
 <script>if(window.INEMA&&typeof window.INEMA.init==='function')window.INEMA.init();</script>
-<script src="../assets/validator.js"></script>
+<script src="../../assets/validator.js"></script>
 </body></html>

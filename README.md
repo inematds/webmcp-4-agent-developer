@@ -63,3 +63,11 @@ Consulte [o contrato de entrega e passagem](docs/entrega-e-progressao.md).
 ## Licença
 
 Código sob licença MIT. Conteúdo educacional © INEMA.
+
+<!-- inema-backlink:v1 -->
+## Mais no INEMA.CLUB
+
+- [Ficha completa deste curso](https://www.inema.club/cursos/249-formacao-webmcp-4-agent-developer/)
+- [Guia: como aprender inteligência artificial](https://www.inema.club/aprender-inteligencia-artificial/)
+- [Todos os cursos](https://www.inema.club/cursos/)
+<!-- /inema-backlink:v1 -->
